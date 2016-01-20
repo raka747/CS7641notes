@@ -17,7 +17,7 @@ lolol find an img
 ### Algorithm
 ID3 is particular algorithm for determining the "best" attributes to split on in creating a decision Tree
 
-'''
+```
 gain(s, a) = 
 Entropy(s) - sum_v |s_v| / |s| Entropy(s_v)
 ```
