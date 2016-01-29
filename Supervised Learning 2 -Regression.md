@@ -79,14 +79,25 @@ The ultimate goal is to use a model that is complex enough to fit the data well 
 
 1. Split the training data into folds
 
-2. | Train on    | Test on  | 
+2. 
+| Train on       | Test on  | 
 | ---------------|----------| 
 | Fold 1, 2, 3   | Fold 4   |
 | Fold 2, 3, 4   | Fold 1   |
 | Fold 1, 3, 4   | Fold 2   |
 | Fold 1, 2, 4   | Fold 3   |
 
+3. Average the error in predicting the test fold based on the polynomial trained on the training folds
 
+So if you're simply looking at applying higher order polynomials to the training data the error decresases order increases. Using cross validation however there are several interesting things to note:
+
+1. Average cross validation error start higher than training error for 0 order. This is because you aren't training on the full set of data.
+
+2. As with training error, average cross validation error typically decreases and gets closer to the training error when initially increasing the order of the polynomial.
+
+3. However, after a certain point giving the cross validation set more degrees of freedom the cross validation starts to be worse off at predicting the test set.
+
+Initially increasing orders allows you beter fit the data however after a certain point, the ability to better fit the data comes at the expense of future generalization.
 
 ## Other input spaces
 
