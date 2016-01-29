@@ -18,18 +18,31 @@ Take the derivative and find where derivative = 0 (minimum)
 ## Polynomial Regression
 Have x = (x_1, x_2, ..., x_n) and y = (y_1, y_2, ..., y_n)
 
-Find c_0 + c_1 x + c_2 x^2 + ... c_m x^m ~= y
+Find 
+
+```tex
+c_0 + c_1 x + c_2 x^2 + ... + c_m \approx y
+```
 
 Arrange constraints in matrix form
 
-```
-
-[[1 x_1 x_1^2 ... x_1 ^m]    [c_0    [y_1
- [1 x_2 x_2^2 ... x_2 ^m]     c_1     y_2
- [...                   ]     ...  =  ...
- [1 x_n x_n^2 ... x_n ^m]]    c_m]    y_n]
-
-w
+```tex
+\begin{bmatrix}
+ 1  & x_1 & x_1^2 & ... & x_1^m\\ 
+ 1  & x_2 & x_2 & ... & x_2^m\\ 
+ ...  &  &  & \\ 
+ 1  & x_n & x_n^2 & ... & x_n^m
+\end{bmatrix}\cdot \begin{bmatrix}
+c_0\\ 
+c_1\\ 
+...\\ 
+c_m
+\end{bmatrix} \approx \begin{bmatrix}
+y_1\\ 
+y_2\\ 
+...\\ 
+y_m
+\end{bmatrix}
 
 ```
 Can't solve exactly (won't be exactly equal) but it can be solved in a least squares sense
