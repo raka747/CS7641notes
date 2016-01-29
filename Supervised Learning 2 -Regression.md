@@ -65,7 +65,7 @@ w &\approx (X^TX)^{-1}X^TY
 
 Can't solve exactly (won't be exactly equal) but it can be solved in a least squares sense
 
-Note that you can't solve the equation exactly. There will be outside sources of ** error ** such as sensor error, malicious or bad data, transcription error, or unmodelled influences.
+Note that you can't solve the equation exactly. There will be outside sources of **error** such as sensor error, malicious or bad data, transcription error, or unmodelled influences.
 
 ## Cross validation
 

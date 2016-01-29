@@ -9,7 +9,7 @@ A neuron is comprised of a cell body, axon, and synapses. When the cell body dec
 
 ### Artificial (Perceptrons)
 
-A first approximation of a neuron can be relatively is used for neurons and networks of neurons to compute things. The neurons can be tuned and trained to fire under different conditions. The neuron theta takes  inputs (x_1, x_2, x_3, ...) and has weights (w_1, w_2, w_3, ...). The neuron boils down to sum_i (x_i * w_i)  if the sum >= theta or the threshold, the neuron fires (y = 1) otherwise the it doesn't (y = 0). This type of neuron is referred to as a ** perceptron **
+A first approximation of a neuron can be relatively is used for neurons and networks of neurons to compute things. The neurons can be tuned and trained to fire under different conditions. The neuron theta takes  inputs (x_1, x_2, x_3, ...) and has weights (w_1, w_2, w_3, ...). The neuron boils down to sum_i (x_i * w_i)  if the sum >= theta or the threshold, the neuron fires (y = 1) otherwise the it doesn't (y = 0). This type of neuron is referred to as a **perceptron**
 
 The perceptron (in a simple 2 input scenario) creates a half-plane as the 2 inputs describe a linear function between 2 variables.
 
@@ -63,7 +63,7 @@ Since:
 
 the weight gets adjusted by a small amount (the learning rate) only when the output of the weight and the actual output are different. And the difference pushes the output in the right direction.
 
-If there is an actual line that separates the output, it is ** linearly separable **. If the data set is linearly separable, the perceptron rule will find it after a finite iterations.
+If there is an actual line that separates the output, it is **linearly separable**. If the data set is linearly separable, the perceptron rule will find it after a finite iterations.
 
 The problem is if the data is not linearly separable. It's generally not easy to tell if the data is linearly separable. In 2 dimensions it can be easy to see but in higher orders it's a lot more difficult. If the algorithm isn't done running we aren't sure if we just haven't run the algorithm long enough or it's not actually linearly solveable... hope someone solves the halting problem.
 
