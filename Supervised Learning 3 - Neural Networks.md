@@ -52,6 +52,7 @@ w_i = w_i + \Delta w_i \newline
 \hat{y} = (\sum_i{w_ix_i} \geq 0 )
 ```
 Since:
+
 | y     | \hat{y}   | y - \hat{y}   |
 | ----- | --------- | ------------- |
 | 0     | 0         | 0             |
