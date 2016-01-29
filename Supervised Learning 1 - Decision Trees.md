@@ -38,7 +38,7 @@ Ideally you choose splits that minimize entropy or maximize Gain
 
 restriction bias: H
 
-preference bias: h el H
+preference bias: h \in H
 
 Preferences of ID3
 - Good splits at the top - prefer the one that has the best split at the top
