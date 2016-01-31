@@ -69,6 +69,31 @@ The problem is if the data is not linearly separable. It's generally not easy to
 
 ## Gradient Decent
 
+Gradient Descent is an algorithm that can accomodate data that isn't linearly separable. In order to do this we imagine the output is not thresholded.
+
+```tex
+\begin{align}
+a &= \sum_i{x_iw_i} \\
+\hat{y} &= {a \geq 0} \\
+E(w) &= \frac{1}{2} \sum_{x,y \in D} {(y-a)^2} \\
+\frac{\delta E}{\delta w_i} &= \frac{\delta}{\delta w_i} \frac{1}{2} \sum_{x,y \in D} {(y-a)^2} \\
+&= \sum_{x,y \in D} {(y-a)} \frac{\delta}{\delta w_i}-\sum_i {x_iw_i} \\
+&= \sum_{x,y \in D} {(y-a)} (-x_i)
+\end{align}
+```
+
+(4) follows due to chain rule and substituting da/dw_i with the \sum_i{x_iw_i}
+(5) follows due to paratial derivative only impacting the x_i term corresponding to the w_i term
+
+This very much resembles the perceptron rule (1 perceptron: guaranteed!, 2 gradient decent: calculus!): 
+
+```tex
+\begin{align}
+\Delta w_i &= \eta (y-\hat{y})x_i \\
+\Delta w_i &= \eta (y-a)x_i
+\end{align}
+```
+
 
 ## Learning rules
 
