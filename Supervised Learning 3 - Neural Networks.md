@@ -120,7 +120,7 @@ Note that sigmoid isn't exactly a perceptron. It's not really a hard threshold, 
 
 ## Optimizing weights
 
-Gradient descent that attempts to find the local minima. There are many advanced methods to find global mminima:
+Gradient descent that attempts to find the local minima. There are many advanced methods to find global minima:
 - Momentum - an "extra" factor that can help "push" past a local minima
 - Higher order derivatives
 - Randomized optimization
@@ -147,7 +147,16 @@ With neural nets, with more iterations error in training data decreases with mor
 
 ## Preference Bias
 
-P
+Algorithm's selection of one representation over another.
+
+What algorithm? Gradient descent has to have initial weights!
+
+A typical method is to start with small random values. Random because you can repeate several times and avoid local minimas. Small because if the weights get really big it can overfit. Smaller values have low complexity
+
+Prefer incorrect over correct and prefer simpler all other things being similar (if the algorithm is good!)
+
+**Occam's Razor** Entities should not be multiplied unnecessarily. Don't make things more complex unless you're decreasing error.
+
 
 ## Summary
 
