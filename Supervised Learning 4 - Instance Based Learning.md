@@ -18,12 +18,12 @@ This version might be a little too literal
 
 ## KNN
 
-Looks at the k nearest neighbors to the query and determines the best answer based on the nearest neighbors. Nearest/distance is a stand-in for similarity.
+Looks at the k nearest neighbours to the query and determines the best answer based on the nearest neighbours. Nearest/distance is a stand-in for similarity.
 
 Given: 
 - Training Data D = {x_i, y_i}
 - Distance metric d(q, x)
-Number of neighbors k
+Number of neighbours k
 Query point q
 
 d(q, x) and k represent domain knowledge
@@ -50,17 +50,20 @@ Some caveats:
 | Regression learning   | n             | 1         |
 | Regression query      | 1             | 1         |
 
-## Doman Knowledge
 
+## KNN Preference Bias
 
+What makes a good hypothesis, given all other things equal what makes the learner prefer one hypothesis to another.
 
-## KNN Bias
+- Locality : Points that are near by are similar. This is embedded in the distance function. There will be good and bad distance functions and requires domain knowledge
+- Smoothness: Averaging. This is related to locality.
+- All features matter *equally*
 
+## Curse of Dimensionality
 
+As the number of features or dimensions grows, the amount of data we need to generalize accurately grows exponentially.
 
-## Curse of Dimensionalaity
-
-
+For machine learning it's instinctual to add more and more features to determine which features is actually important. However, the curse of dimensionality states that as you add more features you need more data.
 
 ## Summary
 
