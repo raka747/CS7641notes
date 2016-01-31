@@ -101,6 +101,14 @@ Gradient can't be done on \hat{y} due to it being non differentiable. It's a ste
 
 ## Sigmoid
 
+```tex
+\begin{align}
+\sigma(a) &= \frac{1}{1 + e^{-a}} \\
+D\sigma(a) &= \sigma(a)(1 - \sigma(a))
+\end{align}
+```
+
+The sigmoid function has the properties as a -> -inf, sigma(a) -> 0 and as a -> inf, sigma(a) = inf, and sigma(0) = 1/2 (S like function). The derivative is easy to work with alathough there can be manay other functions that work well with activation functions.
 
 ## Neural "Networks"
 
