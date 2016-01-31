@@ -151,12 +151,15 @@ Algorithm's selection of one representation over another.
 
 What algorithm? Gradient descent has to have initial weights!
 
-A typical method is to start with small random values. Random because you can repeate several times and avoid local minimas. Small because if the weights get really big it can overfit. Smaller values have low complexity
+A typical method is to start with small random values. Random because you can repeat several times and avoid local minimas. Small because if the weights get really big it can overfit. Smaller values have low complexity
 
 Prefer incorrect over correct and prefer simpler all other things being similar (if the algorithm is good!)
 
 **Occam's Razor** Entities should not be multiplied unnecessarily. Don't make things more complex unless you're decreasing error.
 
-
 ## Summary
-
+- Perceptrons - Threshold unit
+- Networks can produce boolean functions
+- Perceptron rule - finite time for linearly separable
+- General differentiable rule - using gradient descent and back propagation
+- Preference/Restriction bias of neural networks
