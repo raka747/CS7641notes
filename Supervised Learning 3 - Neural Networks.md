@@ -69,7 +69,7 @@ The problem is if the data is not linearly separable. It's generally not easy to
 
 ## Gradient Decent
 
-Gradient Descent is an algorithm that can accomodate data that isn't linearly separable. In order to do this we imagine the output is not thresholded.
+Gradient Descent is an algorithm that can accommodate data that isn't linearly separable. In order to do this we imagine the output is not thresholded.
 
 ```tex
 \begin{align}
@@ -108,10 +108,15 @@ D\sigma(a) &= \sigma(a)(1 - \sigma(a))
 \end{align}
 ```
 
-The sigmoid function has the properties as a -> -inf, sigma(a) -> 0 and as a -> inf, sigma(a) = inf, and sigma(0) = 1/2 (S like function). The derivative is easy to work with alathough there can be manay other functions that work well with activation functions.
+The sigmoid function has the properties as a -> -inf, sigma(a) -> 0 and as a -> inf, sigma(a) = inf, and sigma(0) = 1/2 (S like function). The derivative is easy to work with although there can be many other functions that work well with activation functions.
 
 ## Neural "Networks"
 
+Network that is separated into several layers. Input layers for x_1, ... x_n. Output layer of y. In between there can be several hidden layers that are are neurons. If all of the hidden layer neurons are sigmoid units then the whole thing is differentiable which allows you to determine how a small change in any weight in any sigmoid in the network can impact the mapping from inputs to outputs even with the many non linearities created by the network.
+
+Furthermore, there is propagation which is a *conceptually beneficial organization of chain rule* that allows error information to be backpropagated to adjust the network to make it more resemble what we desire.
+
+Note that sigmoid isn't exactly a perceptron. It's not really a hard threshold, it doesn't guarantee convergence. There are many local optima
 
 ## Optimizing weights
 
