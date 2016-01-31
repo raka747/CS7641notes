@@ -41,6 +41,8 @@ Some caveats:
 
 ### Performance
 
+Lazy learner versus eager learner.
+
 |                       | Run Time      | space     |
 | --------------------- | ------------- | --------- |
 | 1-NN Learning         | 1             | n         |
@@ -65,5 +67,20 @@ As the number of features or dimensions grows, the amount of data we need to gen
 
 For machine learning it's instinctual to add more and more features to determine which features is actually important. However, the curse of dimensionality states that as you add more features you need more data.
 
+Dimensionality isn't just a problem for kNN but for machine learning in general. Adding in extra dimensions without actually adding more data, gives you more "volume" to fill without giving you more coverage within that volume.
+
+## Misc.
+
+- d(x, q) = Euclidean, Manhattan, weighted. Distance measures very heavily. Weighted dimensions can help deal with dimensionality and there are automatic ways for determining weights.
+- Choosing k is important. In some cases you might have k = n using weighted average or weighted regression. The hypothesis space starts simply (possibly just a linear regression), but with locally weighted regression you can have a hypothesis space that can be more complicated depending on the local data.
+
 ## Summary
 
+* Instance based learning
+* Lazy learner vs Eager Learner
+* kNN
+* Nearest neighbor: similarity (distance) Domain knnowledge is important!
+* Classification vs regression
+* Averaging
+* Locally weighted $x regression
+* Curse of dimensionality O(2^d)
