@@ -85,7 +85,9 @@ E(w) &= \frac{1}{2} \sum_{x,y \in D} {(y-a)^2} \\
 (4) follows due to chain rule and substituting da/dw_i with the \sum_i{x_iw_i}
 (5) follows due to paratial derivative only impacting the x_i term corresponding to the w_i term
 
-This very much resembles the perceptron rule (1 perceptron: guaranteed!, 2 gradient decent: calculus!): 
+## Learning rules
+
+This very much resembles the perceptron rule (1 perceptron: guaranteed! finite convergence if linear separable, 2 gradient decent: calculus! robust, converge to local optimum): 
 
 ```tex
 \begin{align}
@@ -94,8 +96,7 @@ This very much resembles the perceptron rule (1 perceptron: guaranteed!, 2 gradi
 \end{align}
 ```
 
-
-## Learning rules
+Gradient can't be done on \hat{y} due to it being non differentiable. It's a step function.
 
 
 ## Sigmoid
