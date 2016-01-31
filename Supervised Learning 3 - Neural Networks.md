@@ -130,12 +130,24 @@ Gradient descent that attempts to find the local minima. There are many advanced
 
 A more complex network consists of more nodes and more layers. In addition, if networks and weights are larger (even with the same nodes and layers) it can create a more complex network.
 
-
 ## Restriction Bias
 
+Restriction bias is the representational power and the set of hypotheses that are being considered.
+
+Perceptron: half-spaces
+Sigmoid: Much more complex, not many restrictions with a big enough network
+
+- Boolean: network of threshold-like units
+- Continuous: "connected" (no jumps) requires 1 hidden layer (may need many units)
+- Arbitrary: 2 hidden layers and allow for discontinuities
+
+Neural nets overall have very little restrictions, but an arbitrary network can have restrictions. As a result there is a danger of overfitting. This can be mitigated by cross validation.
+
+With neural nets, with more iterations error in training data decreases with more iterations but at some point the cross validation is u-shaped.
 
 ## Preference Bias
 
+P
 
 ## Summary
 
