@@ -116,9 +116,19 @@ Network that is separated into several layers. Input layers for x_1, ... x_n. Ou
 
 Furthermore, there is propagation which is a *conceptually beneficial organization of chain rule* that allows error information to be backpropagated to adjust the network to make it more resemble what we desire.
 
-Note that sigmoid isn't exactly a perceptron. It's not really a hard threshold, it doesn't guarantee convergence. There are many local optima
+Note that sigmoid isn't exactly a perceptron. It's not really a hard threshold, it doesn't guarantee convergence. There are many local optima.
 
 ## Optimizing weights
+
+Gradient descent that attempts to find the local minima. There are many advanced methods to find global mminima:
+- Momentum - an "extra" factor that can help "push" past a local minima
+- Higher order derivatives
+- Randomized optimization
+- Penalty for "complexity" - Similar to regression overfitting or large decision trees overfitting
+
+> Optimization == learning
+
+A more complex network consists of more nodes and more layers. In addition, if networks and weights are larger (even with the same nodes and layers) it can create a more complex network.
 
 
 ## Restriction Bias
