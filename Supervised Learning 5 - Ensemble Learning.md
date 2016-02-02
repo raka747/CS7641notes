@@ -38,15 +38,43 @@ P_{\mathbb{D}}[h(x)=c(x))]
 
 That is to say the probability that a particular example of x comes up also has ana impact on error not just how likely the learner is to get X wrong.
 
-## Weak Learning
+### Weak Learning
 
+A Weak Learner is a learner that no matter what the distrobution is, you always get an error rate that is better than chance (or 1/2)
 
+```tex
+\forall_\mathbb{D}[\cdot] \leq \frac{1}{2}-\epsilon
+```
 
 ## Boosting in code
 
+* Given training {(x_i, y_i)} and y_i in {-1, +1}
+* For t = 1 to T
+  * construct D_t
+  * find a week classifier h_t(x) with small error \epsilon_t = P_{D_t}[h_t(x_i) = y_i]
+* Output H_final
 
+### Distrobution
 
-## Final Hypotheses
+Distribution starts off even between all test casaes.
+
+For each distribution after, if the prediction was correct its probability in the distribution generally decreases. If the learner gets the prediction wrong, the probability in the distribution increases, but it ultimately depends on the rest of the distribution and how the learner performed, but as long as one hypothesis the probalities that were correct decrease. 
+
+```tex
+\begin{align}
+\mathbb{D}_1(i) &= \frac{1}{n} \\
+\mathbb{D}_{t+1}(i) &= \frac{\mathbb{D}e^{-\alpha_ty_ih_t(x_i)}}{Z_t} \textup{ where} \\
+\alpha_t &= \frac{1}{2} ln \frac{1 - \epsilon_t}{\epsilon_t}
+\end{align}
+```
+
+### Final Hypotheses
+
+alpha is a measure of how well the hypothesis actually performed so the final hypothese
+
+```tex
+H_{final}(x) = sgn(\sum_t {\alpha_th_t(x)})
+```
 
 
 
