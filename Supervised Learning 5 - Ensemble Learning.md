@@ -30,6 +30,13 @@ Rather than choosing uniformly randomly over the data. Instead of focusing rando
 
 ### Errors
 
+Number of mismatches have been the metric for error but it implicit that each example is just as likely. A more general form of error is:
+
+```tex
+P_{\mathbb{D}}[h(x)=c(x))]
+``` 
+
+That is to say the probability that a particular example of x comes up also has ana impact on error not just how likely the learner is to get X wrong.
 
 ## Weak Learning
 
