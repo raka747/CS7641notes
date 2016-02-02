@@ -13,17 +13,22 @@ There are similarities to Neural nets and decision trees. The difference is typi
 
 We focus on a smaller subset because it can be harder to learn a simple rule if you're looking at too much data.
 
-## Simple algorithm
+## Simple algorithm: Bagging
 
-1. Learn over a subset of data
-2. Combine
+1. Learn over a subset of data - Uniformly randomly pick data and apply a learner
+2. Combine - Average the results
 
-## Bucketing
+The bags are random subsets. Also called bootstrap aggregation.
 
 
+## Boosting High level
 
-## Boosting
+Rather than choosing uniformly randomly over the data. Instead of focusing randomly, focus on the examples that are "hard" or that we are not good at.
 
+1. Learn over a subset of data - "Hardest" examples
+2. Combine - Weighted means
+
+### Errors
 
 
 ## Weak Learning
