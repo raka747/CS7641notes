@@ -79,7 +79,7 @@ Dimensionality isn't just a problem for kNN but for machine learning in general.
 * Instance based learning
 * Lazy learner vs Eager Learner
 * kNN
-* Nearest neighbor: similarity (distance) Domain knnowledge is important!
+* Nearest neighbour: similarity (distance) Domain knnowledge is important!
 * Classification vs regression
 * Averaging
 * Locally weighted $x regression

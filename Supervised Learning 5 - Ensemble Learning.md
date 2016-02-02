@@ -8,11 +8,15 @@ There are similarities to Neural nets and decision trees. The difference is typi
 
 ## Simple rules
 
+1. Learn over a subset of the data... repeat
+2. Combine for a complex rule
 
+We focus on a smaller subset because it can be harder to learn a simple rule if you're looking at too much data.
 
 ## Simple algorithm
 
-
+1. Learn over a subset of data
+2. Combine
 
 ## Bucketing
 
