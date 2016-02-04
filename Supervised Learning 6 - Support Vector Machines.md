@@ -31,6 +31,8 @@ as w^T/||w|| is a unit vector in the direction of w. Furthermore since w has the
 
 In order to maximize the length of x_1 - x_2 we want the smallest ||w|| possible.
 
+w^T/||w|| (x_1 - x_2)  is m or the **margin**.
+
 ## Optimal Seperator
 
 
