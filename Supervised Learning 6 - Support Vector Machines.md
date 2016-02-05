@@ -38,7 +38,7 @@ w^T/||w|| (x_1 - x_2)  is m or the **margin**. You wanat to find something that 
 Maximizing 2/||w|| ends up being hard but is equivalent to maximizing 1/2 ||w||^2. Inversing it changes it from min to max. Squaring it is monotonic so doesn't change the problem, but it makes it easier by turning it into a quadratic programming problem. The standard form of the quadratic programming problem maximize is:
 
 ```tex
-\sum_i{\alpha_i} - \frac{1}{2} \sum_{iu}{\alpha_i \alpha_u y_iy_ux_i^Tx_u} \newline
+W(\alpha) = \sum_i{\alpha_i} - \frac{1}{2} \sum_{iu}{\alpha_i \alpha_u y_iy_ux_i^Tx_u} \newline
 \textup{where } \alpha_i \geq0,\sum_i{\alpha_iy_i} = 0
 ```
 
@@ -56,6 +56,24 @@ The x's in the equation that we're trying to represent are the dot product and t
 
 ## Linearly Married
 
+In some instances you don't have linearly separable data. In some cases this can be due to "noise" with most of the data being linearly separable and in some cases ignore or negate certain examples.
+
+However in other cases the data is separable, but not linearly - so they are linearly married. A way around this is to "change" the data points without changing the data points. Use a function phi(q) to change say a 2 dimension point <q_1, q_2> to a three dimensional point:
+
+```tex
+\Phi (q) = <q_1^2, q_2^2, \sqrt{2}q_q_2 >
+```
+
+Note, no extra information has been added. Also note that the way this information is ultimately utilized by is in a dot product x^Tx in w(\alpha).
+
+```tex
+\begin{align}
+x^Ty &\to \\
+\Phi(x)^T\Phi(y) &= <x_1^2, x_2^2, \sqrt{2}x_1x_2>^T<y_1^2,y_2^2,\sqrt{2}y_1y_2> \\
+&= (x_1y_1 + x_2y_2)^2 \\
+&= (x^Ty)^2
+\end{align}
+```
 
 
 ## Kernal
