@@ -35,7 +35,7 @@ w^T/||w|| (x_1 - x_2)  is m or the **margin**. You wanat to find something that 
 
 **Classifying everything correctly** isn't mathematical but it is equivalent to y_i(w^Tx_c + b) >= 1 \forall i. This is true because y_i is the label and (w^Tx_c + b) is the hypothesis and both are {-1, 1} so if the hypothesis "matches" the label the sign of both are the same which means they multiply to be >= 1.
 
-Maximizing 2/||w|| ends up being hard but is equivalent to maximizing 1/2 ||w||^2. Inversing it changes it from min to max. Squaring it is monotonic so doesn't change the problem, but it makes it easier by turning it into a quadratic programming problem. The standard form of the quadratic programming problem is:
+Maximizing 2/||w|| ends up being hard but is equivalent to maximizing 1/2 ||w||^2. Inversing it changes it from min to max. Squaring it is monotonic so doesn't change the problem, but it makes it easier by turning it into a quadratic programming problem. The standard form of the quadratic programming problem maximize is:
 
 ```tex
 \sum_i{\alpha_i} - \frac{1}{2} \sum_{iu}{\alpha_i \alpha_u y_iy_ux_i^Tx_u} \newline
@@ -43,6 +43,10 @@ Maximizing 2/||w|| ends up being hard but is equivalent to maximizing 1/2 ||w||^
 ```
 
 Namely that the sum of alpha for each label minus the half the sum of the product of their alphas and labels.
+
+Once you have solved the quadratic programming problem you can retrieve based on w = \sum_i {\alpha_iy_ix_i}. b can be easily recovered by plugging in an x and y with the w.
+
+Most of the alaphas are 0 in practice. This ends up meaning that many of the input vectors do not matter. Hence the name that the machine only needs a few support vectors (the ones with non-zero alphas). 
 
 ## Optimal Seperator
 
