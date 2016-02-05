@@ -2,19 +2,19 @@
 
 ## Introduction
 
-Given a linearly seperable data set there be potentially infinite ways of seperating data. How would you draw the best line of fit? You would want the line that provides the biggest buffer between any of your data. A line that gets closer to the data can be thought of trusting the data too much or overfitting. This example of overfitting is a bit different than what we've previously seen.
+Given a linearly separable data set there be potentially infinite ways of separating data. How would you draw the best line of fit? You would want the line that provides the biggest buffer between any of your data. A line that gets closer to the data can be thought of trusting the data too much or overfitting. This example of overfitting is a bit different than what we've previously seen.
 
 ## Support Vector Machines
 
-So going with a set of linearly seperable data set
+So going with a set of linearly separable data set
  
-y = mx + b <- 2 dimmensional version
+y = mx + b <- 2 dimensional version
 y = w^Tx + b <- More general formula for hyperplanes and works for multiple dimensions of parameters
 
 y is label {-1, +1} (note: not quite the same as the y in y = mx + b)
 w^T and b are parameters of the plane
 
-So we want to find the seperator that is the furtherst from the data sets but is still consistent. In order to do wo we can plug in two points on the boundaries x_1 and x_2 that satisfy:
+So we want to find the separator that is the furthest from the data sets but is still consistent. In order to do wo we can plug in two points on the boundaries x_1 and x_2 that satisfy:
 
 w^Tx_1 + b = 1
 x^Tx_2 + b = -1
@@ -38,7 +38,7 @@ w^T/||w|| (x_1 - x_2)  is m or the **margin**. You want to find something that m
 Maximizing 2/||w|| ends up being hard but is equivalent to maximizing 1/2 ||w||^2. Inversing it changes it from min to max. Squaring it is monotonic so doesn't change the problem, but it makes it easier by turning it into a quadratic programming problem. The standard form of the quadratic programming problem maximize is:
 
 ```tex
-W(\alpha) = \sum_i{\alpha_i} - \frac{1}{2} \sum_{iu}{\alpha_i \alpha_u y_iy_ux_i^Tx_u} \newline
+W(\alpha) = \sum_i{\alpha_i} - \frac{1}{2} \sum_{iu}{\alpha_i \alpha_j y_iy_jx_i^Tx_j} \newline
 \textup{where } \alpha_i \geq0,\sum_i{\alpha_iy_i} = 0
 ```
 
@@ -81,10 +81,32 @@ Furthermore, this particular projection technique of using phi doesn't require t
 
 ## Kernel
 
+```tex
+W(\alpha) = \sum_i{\alpha_i} - \frac{1}{2} \sum_{iu}{\alpha_i \alpha_j y_iy_jx_i^Tx_j}
+```
 
+Is our new function and K(x_i,x_j) is our new notion of similarity. Furthermore, it is how we inject domain knowledge.
+
+Kernel functions can be anything i.e. K = (x^Ty)2 or K = x^Ty both of which are special cases of a general kernel function (x^Ty+c)^P. This is similar to polynomial regression of kernels. 
+
+```tex
+\begin{align} 
+K &= e^{-(\left \| x-y \right \|^2/2\sigma^2)} \\
+K &= tanh(\alpha x^Ty+\theta)
+\end{align}
+```
+
+The first is radial kernel and the latter is a kernal that resembles a sigmoid. A good Kernal really allows you to capature domain knowledge.
+
+The **Mercer Condition** is the condition for kernal functions in that they represent distance in some way
 
 ## Summary
 
+- Margins and their relationship to generalization and overfitting
+- We want to find the margin that is largest
+- Optimization problem for finding max margins and quadratic programs allow us to easily solve these problems
+- Support vectors
+- Linear isn't alway enough so we can project into a higher dimension but really just x^Ty -> K(x,y)
 
 
 ## Boosting and overfitting
