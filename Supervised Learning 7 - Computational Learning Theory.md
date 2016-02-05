@@ -31,7 +31,11 @@ Inductive learning is learning from examples. There are several useful quantitie
 
 ## Selecting Training Examples
 
-
+There are several ways to select traininng examples:
+1. Learner ask questions for the teacher - c(x)?
+2. Teacher gives examples to help the learner - Teacher  chooses x, tells c(x)
+3. From nature (fixed distribution) - x chosen from D and c(x) comes along
+4. Evil - worst distribution
 
 ## Teacher with Constrained Queries
 
