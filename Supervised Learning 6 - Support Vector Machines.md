@@ -23,15 +23,15 @@ The difference between these 2 equations is:
 
 w^T(x_1 - x_2) = 2
 
-And this difference represents a vector between the two boundries. In order to determine the distance between the two boundries you can divide ||w|| from both sides to get
+And this difference represents a vector between the two boundaries. In order to determine the distance between the two boundaries you can divide ||w|| from both sides to get
 
 w^T/||w|| (x_1 - x_2) = 2/||w|| 
 
-as w^T/||w|| is a unit vector in the direction of w. Furthermore since w has the property of describing the hyperplane boundry, it itself is perpendicular to the boundry (like x_1 - x_2). So, w^T/||w|| (x_1 - x_2) gives us the length of the projection (x_1 - x_2) onto w (but isn't really a projection since they are in the same direction). and the dot product is 2/||w|| which gives us the length of x_1 - x_2.
+as w^T/||w|| is a unit vector in the direction of w. Furthermore since w has the property of describing the hyperplane boundary, it itself is perpendicular to the boundary (like x_1 - x_2). So, w^T/||w|| (x_1 - x_2) gives us the length of the projection (x_1 - x_2) onto w (but isn't really a projection since they are in the same direction). and the dot product is 2/||w|| which gives us the length of x_1 - x_2.
 
 In order to maximize the length of x_1 - x_2 we want the smallest ||w|| possible.
 
-w^T/||w|| (x_1 - x_2)  is m or the **margin**. You wanat to find something that amximizes the margin subject to the condition that you classify everything.
+w^T/||w|| (x_1 - x_2)  is m or the **margin**. You want to find something that maximizes the margin subject to the condition that you classify everything.
 
 **Classifying everything correctly** isn't mathematical but it is equivalent to y_i(w^Tx_c + b) >= 1 \forall i. This is true because y_i is the label and (w^Tx_c + b) is the hypothesis and both are {-1, 1} so if the hypothesis "matches" the label the sign of both are the same which means they multiply to be >= 1.
 
@@ -44,15 +44,15 @@ W(\alpha) = \sum_i{\alpha_i} - \frac{1}{2} \sum_{iu}{\alpha_i \alpha_u y_iy_ux_i
 
 Namely that the sum of alpha for each label minus the half the sum of the product of their alphas and labels.
 
-## Optimal Seperator
+## Optimal Separator
 
 Once you have solved the quadratic programming problem you can retrieve based on w = \sum_i {\alpha_iy_ix_i}. b can be easily recovered by plugging in an x and y with the w.
 
 Most of the alaphas are 0 in practice. This ends up meaning that many of the input vectors do not matter. Hence the name that the machine only needs a few support vectors (the ones with non-zero alphas). This is intuitive because the points near the edge really determine the boundary and can't be used to define the counters have no influence.
 
-This is similar to kNN. It's not quite a lazy learner, instead it's as though you put a minimal effort to understand the bare minimum number of points to keep to give you good nearest neighbors.
+This is similar to kNN. It's not quite a lazy learner, instead it's as though you put a minimal effort to understand the bare minimum number of points to keep to give you good nearest neighbours.
 
-The x's in the equation that we're trying to represent are the dot product and that gives us a notion of the similarity since dot product represents the magnitude of the projection. Orthogonal proejction gives dot product of 0 and if the vectors are pointing in a similar direction it gives a larger magnitude.
+The x's in the equation that we're trying to represent are the dot product and that gives us a notion of the similarity since dot product represents the magnitude of the projection. Orthogonal projection gives dot product of 0 and if the vectors are pointing in a similar direction it gives a larger magnitude.
 
 ## Linearly Married
 
@@ -75,8 +75,11 @@ x^Ty &\to \\
 \end{align}
 ```
 
+This is essentially the equation of circle meaning we've changed the notion of "being similar" has transformed from falling above or below a hyper line by changing similar to mean falling in or out of a circle.
 
-## Kernal
+Furthermore, this particular projection technique of using phi doesn't require the mapping to actually occur since the ultimate term is (x^Ty)^2 when the original notion of similarity is x^ty. This technique is called the **kernel trick**
+
+## Kernel
 
 
 
