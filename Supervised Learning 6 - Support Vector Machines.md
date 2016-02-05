@@ -1,4 +1,4 @@
-# Supervise Learning 5 - Support Vector Machines
+# Supervise Learning 6 - Support Vector Machines
 
 ## Introduction
 
@@ -129,4 +129,4 @@ As you  add more weak learners you get more confidence and a larger margin.
 
 Boosting tends to overfit if the weak learner uses an algorithm that can overfit
 
-
+Another instance is that when there is pink noise or uniform noise (not white noise which is Gaussian noise)
