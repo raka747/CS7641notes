@@ -44,13 +44,15 @@ Maximizing 2/||w|| ends up being hard but is equivalent to maximizing 1/2 ||w||^
 
 Namely that the sum of alpha for each label minus the half the sum of the product of their alphas and labels.
 
-Once you have solved the quadratic programming problem you can retrieve based on w = \sum_i {\alpha_iy_ix_i}. b can be easily recovered by plugging in an x and y with the w.
-
-Most of the alaphas are 0 in practice. This ends up meaning that many of the input vectors do not matter. Hence the name that the machine only needs a few support vectors (the ones with non-zero alphas). 
-
 ## Optimal Seperator
 
+Once you have solved the quadratic programming problem you can retrieve based on w = \sum_i {\alpha_iy_ix_i}. b can be easily recovered by plugging in an x and y with the w.
 
+Most of the alaphas are 0 in practice. This ends up meaning that many of the input vectors do not matter. Hence the name that the machine only needs a few support vectors (the ones with non-zero alphas). This is intuitive because the points near the edge really determine the boundary and can't be used to define the counters have no influence.
+
+This is similar to kNN. It's not quite a lazy learner, instead it's as though you put a minimal effort to understand the bare minimum number of points to keep to give you good nearest neighbors.
+
+The x's in the equation that we're trying to represent are the dot product and that gives us a notion of the similarity since dot product represents the magnitude of the projection. Orthogonal proejction gives dot product of 0 and if the vectors are pointing in a similar direction it gives a larger magnitude.
 
 ## Linearly Married
 
