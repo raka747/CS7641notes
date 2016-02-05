@@ -20,7 +20,14 @@ Some of the resources useful in analyzing learning algoriths are time and space 
 
 ## Inductive Learning
 
-earning from examples.
+Inductive learning is learning from examples. There are several useful quantities to define when talking about inductive learning:
+
+- Probability of successful training - (1 - delta)
+- Number of examples to train on - m
+- Complexity of hypothesis class - Complexity of H. Double edged sword. A class simple hypothesis class can prevent you from expressing truly complex concepts. Whereas a class of complex hypothesese can potentially easily overfit the data requiring a lot of data to truly define the relationships.
+- Accuracy to which target concept is approximated - epsilon
+- Manner in which training examples presented - two in particular batch (all handed to the learner at once), or online (one at a time)
+- Manner in which training examples selected
 
 ## Selecting Training Examples
 
