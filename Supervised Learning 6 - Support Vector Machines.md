@@ -96,9 +96,9 @@ K &= tanh(\alpha x^Ty+\theta)
 \end{align}
 ```
 
-The first is radial kernel and the latter is a kernal that resembles a sigmoid. A good Kernal really allows you to capature domain knowledge.
+The first is radial kernel and the latter is a kernel that resembles a sigmoid. A good Kernel really allows you to capture domain knowledge.
 
-The **Mercer Condition** is the condition for kernal functions in that they represent distance in some way
+The **Mercer Condition** is the condition for kernel functions in that they represent distance in some way
 
 ## Summary
 
@@ -106,9 +106,27 @@ The **Mercer Condition** is the condition for kernal functions in that they repr
 - We want to find the margin that is largest
 - Optimization problem for finding max margins and quadratic programs allow us to easily solve these problems
 - Support vectors
-- Linear isn't alway enough so we can project into a higher dimension but really just x^Ty -> K(x,y)
+- Linear isn't always enough so we can project into a higher dimension but really just x^Ty -> K(x,y)
 
 
 ## Boosting and overfitting
+
+Boosting doesn't tend to overfit. Instead of a training rate that constantly decreases error and a test error that initially decreases but at some point increases.
+
+Normally we track error which is the measure of the probability that you get the incorrect answer.
+
+Another notion that is captured by boosting and other learning algorithms that measures how sure you are in the answer. In kNN, having 5 NN agree would cause relatively high confidence where as 3 agree and 2 disagree would be lower confidence. Or in regression having a high variance would be low confidence and low variance would be high confidence.
+
+The final hypothesis is:
+
+```tex
+H_{final}(x) = sgn\left (\frac {\sum_t \alpha_th_t(x)}{\sum{\alpha_t}}  \right )
+```
+
+Because it's normalized, the values end up between -1 and 1 and the absolute value gives you a measure of the confidence. What ends up happening if you continue to add weak learners i that the answers that are near the boundary start to move away from the boundary meaning the confidence keeps going up (while the error still stays roughly constant).
+
+As you  add more weak learners you get more confidence and a larger margin.
+
+Boosting tends to overfit if the weak learner uses an algorithm that can overfit
 
 
