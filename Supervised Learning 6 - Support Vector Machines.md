@@ -31,7 +31,18 @@ as w^T/||w|| is a unit vector in the direction of w. Furthermore since w has the
 
 In order to maximize the length of x_1 - x_2 we want the smallest ||w|| possible.
 
-w^T/||w|| (x_1 - x_2)  is m or the **margin**.
+w^T/||w|| (x_1 - x_2)  is m or the **margin**. You wanat to find something that amximizes the margin subject to the condition that you classify everything.
+
+**Classifying everything correctly** isn't mathematical but it is equivalent to y_i(w^Tx_c + b) >= 1 \forall i. This is true because y_i is the label and (w^Tx_c + b) is the hypothesis and both are {-1, 1} so if the hypothesis "matches" the label the sign of both are the same which means they multiply to be >= 1.
+
+Maximizing 2/||w|| ends up being hard but is equivalent to maximizing 1/2 ||w||^2. Inversing it changes it from min to max. Squaring it is monotonic so doesn't change the problem, but it makes it easier by turning it into a quadratic programming problem. The standard form of the quadratic programming problem is:
+
+```tex
+\sum_i{\alpha_i} - \frac{1}{2} \sum_{iu}{\alpha_i \alpha_u y_iy_ux_i^Tx_u} \newline
+\textup{where } \alpha_i \geq0,\sum_i{\alpha_iy_i} = 0
+```
+
+Namely that the sum of alpha for each label minus the half the sum of the product of their alphas and labels.
 
 ## Optimal Seperator
 
