@@ -120,7 +120,7 @@ Version space: VS(S) = {h such that h \in H consistent with S}
 
 ### Error of h
 
-Traianing error: Fraction of training examples misclassified by h
+Training error: Fraction of training examples misclassified by h
 True error: Fraction of examples that would be misclassified on a sample drawn from D
 
 Mathematically:
@@ -128,21 +128,53 @@ Mathematically:
 error_D(h) = Pr_{x~D}\left [ c(x) \neq h(x) \right ]
 ```
 
-## PAC Learning
+### Definitions of parameters
 
+C: concept class
+L: Learner
+H: Hypothesis space
+n: |H|, size of hypothesis space
+D: distribution over inputs
+0 <= \epsilon <= 1/2 error goal
+0 <= \delta <= 1/2 certainty goal (1 - \delta)
 
+Since we're drawing our training sample randomly from a distribution D it's possible to get unlucky and have a bad training set that results in higher error but it's okay because the probability of that happening is very low
 
-## PAC Learnable
+PAC - Probably approximately correct or (1 - \delta) \epsilon h(x) = c(x)
 
+### Formal definition of PAC Learnable
 
+c is PAC_learnable by L using H iff learner L will, with p robability 1 - \delta, output a hypothesis h \in H such that error_D(h) <= \epsilon in time and samples in 1/\epsilon, 1/\delta, and n
 
 ## Epsilon Exhausted
 
+A version space is epsilon exhausted if every hypothesis in the version space has an error less than epsilon. Mathematically:
 
+VS(s) is \epsilon-exhausted iff \forall h \in VS(s) error_d(h) <= \epsilon
 
-## Haussler Theorem
+## Haussler Theorem - Bound True Error
 
+Let error_D(h_1, ..., h_k \in H) > \epsilon High true error
 
+How much data do we need to remove these hypotheses?
+
+If the error is epsilon, the probability of match is 1 - \epsilon and that's a relatively low probability:
+
+Pr_{x~D} (h-i(x) = c(x)) <= 1 - \epsilon
+
+Across multiple (independent and random) samples the probability the hypothesis is consistent is:
+
+Pr(h_i consistent with c on m examples) <= (1-\epsilon)^m
+
+So above applies to one hypothesis. The probability that at least one of the bad hypothesis remains in the version space is (think of h_1 or h_2 or ... h_k and "or" is addition of probabilities k times)
+
+Pr(at least one of h_1, ..., h_k consistent with c on m examples) <= k(1 - \epsilon)^m <= |H|(1 - \epsilon)^m
+
+So using the fact that -\epsilon >= ln(1 - \epsilon)
+
+> Calculus... derivative of ln(1 - x) is 1/(1 - x) which at 0 is -1, the same as the derivative of -x. But it decreases meaning that ln(1 - x) "falls faster" than -x
+
+(1 - \epsilon)^m <= e^(-\epsilon m)
 
 ## Summary
 
