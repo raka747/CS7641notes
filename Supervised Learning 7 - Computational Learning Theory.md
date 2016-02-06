@@ -116,7 +116,9 @@ Version space: VS(S) = {h such that h \in H consistent with S}
 
 > xor is !=
 
-## PAC Learning - Error of h
+## PAC Learning
+
+### Error of h
 
 Traianing error: Fraction of training examples misclassified by h
 True error: Fraction of examples that would be misclassified on a sample drawn from D
