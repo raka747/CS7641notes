@@ -108,11 +108,23 @@ Successful hypothesis doesn't necessarily need to mean a 100% accurate hypothesi
 
 ## Version Spaces
 
+True hypothesis: c \in H
+Learn from Training: S \subset X, c(x) \forall x \in S
+Candidate hypothesis: h \in H
+consistent learner: Produces c(x) = h(x) for x \in S in other words it is a learner that is able to produce a hypothesis that is consistent with the data
+Version space: VS(S) = {h such that h \in H consistent with S}
 
+> xor is !=
 
-## Error of h
+## PAC Learning - Error of h
 
+Traianing error: Fraction of training examples misclassified by h
+True error: Fraction of examples that would be misclassified on a sample drawn from D
 
+Mathematically:
+```tex
+error_D(h) = Pr_{x~D}\left [ c(x) \neq h(x) \right ]
+```
 
 ## PAC Learning
 
