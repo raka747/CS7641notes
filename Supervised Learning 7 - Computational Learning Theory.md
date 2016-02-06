@@ -43,7 +43,7 @@ If the teacher is trying to teach the student it can ask 1 question to the learn
 
 If the learner is choosing the questions then the # of questions is roughly log_2|H| assuming you can ask yes/no questions that split the remaining hypotheses in half.
 
-## Teacher with Constrained Queries
+## Learning with Constrained Queries
 
 The 20Q scenario is kind of misleading because in that scenario the teacher is allowed tp ask any question in the universe of questions but it isn't realistic.
 
@@ -65,9 +65,9 @@ Hypothesis: x_1 and x_3 and not x_5
 
 With a nice teacher you need 2 examples to show what's irrelevant. Then 1 example per relevant example (max k). So despite having 3^k hypotheses, only 2 + k examples need to teach a concept. 
 
-## Learner with Constrained Queries
+### Learner with Constrained Queries
 
-
+However when the learner is coming up with questions with constrained queries in the classical scenario, it's not possible to ask a question that splits the hypothesis in half. Given a "hard" question i.e. a hypothesis that involves all of the inputs, you'll need approx. 2^k guesses before finding a true statement of the 3^k hypothesis space. Once an input is found, it's easy to derive the actual hypothesis, but to get there you need an exponential number of guesses.
 
 ## Learner with Mistake Bounds
 
