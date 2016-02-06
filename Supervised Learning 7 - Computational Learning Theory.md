@@ -174,7 +174,36 @@ So using the fact that -\epsilon >= ln(1 - \epsilon)
 
 > Calculus... derivative of ln(1 - x) is 1/(1 - x) which at 0 is -1, the same as the derivative of -x. But it decreases meaning that ln(1 - x) "falls faster" than -x
 
+Multiply both sides by m and raise to e to the power gives:
+
 (1 - \epsilon)^m <= e^(-\epsilon m)
+
+So:
+
+Pr(at least one of h_1, ..., h_k consistent with c on m examples) <= k(1 - \epsilon)^m <= |H|(1 - \epsilon)^m <= |H|e^(-\epsilon m) <= \delta
+
+ln|H| - \epsilon m <= ln \delta, m >= 1/\epsilon(ln|H| + ln(1/\delta))
+
+So for example
+H={h_i(x) = x_i}
+x is 10 bits
+\epsilon: 0.1
+\delta: 0.2
+D: uniform
+
+m>= 1/.1 (ln(10) + ln(1/.2)) >= 39.12  or 40 samples
 
 ## Summary
 
+- Teachers and students (learners) and the interaction
+  - What is learnable? like complexity theory for Machine Learning
+- Sample complexity - data
+- Types of interactions
+  - Learners picks questions
+  - teacher picks questions (very helpful)
+  - nature picks questions (unfeeling / oblivious)
+- mistake bounds
+- PAC learning: version spaces, training / test / true error, distribution, epsilon-exhausted, sample complexity bound
+  - m >= 1/\epsilon(ln|H| + ln(1/\delta))
+  - If the true hypothesis isn't in the version space it's "agnostic" and needs to get the "best" in its own version space. Similar form and still polynomial but not as good
+  - Bound depends on the hypothesis space which means if you have infinite hypothesis space this bound doesn't apply
