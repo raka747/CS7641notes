@@ -21,7 +21,11 @@ Where \theta is any real number. The hypothesis space for this problem is infini
 
 ## Power of a hypothesis space
 
+What is the largest set of inputs that the hypothesis class can label in all possible ways.
 
+In the above example, a set of one element i.e. S = {6} can be labeled as True or False depending on if \theta is less or more than 6. 
+
+However not all pairs of inputs can be labeled in any way. For x_1, x_2 where x_1 < x_2, x_1 cannot be true if x_2 is false (all other combinations of x_1 and x_2 being true or false work). So this hypothesis space, even though it's infinite, isn't very expressive.
 
 ## What does VC stand for?
 
