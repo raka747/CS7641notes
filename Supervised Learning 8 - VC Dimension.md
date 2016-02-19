@@ -10,7 +10,14 @@ The problems is if you have an infinite set of hypothesis this equation is infin
 
 ## Maybe it's not so bad
 
+Assume you have a data set and hypothesis space:
 
+```
+X: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+H: h(x)= x >= \theta
+```
+
+Where \theta is any real number. The hypothesis space for this problem is infinite. However really only hypothesis space that matters given X is positive integers 1 to 10 which is finite. There is a notion of syntactic hypothesis space which is anything that can be written as the hypothesis. However there is also semantic hypothesis or only the meaningfully different hypothesis space.
 
 ## Power of a hypothesis space
 
