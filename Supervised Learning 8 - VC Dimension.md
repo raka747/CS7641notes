@@ -29,7 +29,9 @@ However not all pairs of inputs can be labeled in any way. For x_1, x_2 where x_
 
 ## What does VC stand for?
 
+What is the largest set of inputs that the hypothesis class can shatter? This quantity is the VC dimension.
 
+VC stands for Vapnik-Chervonenkis - two people who related the largest set of inputs that the hypothesis space can shatter to the amount of data need to learn. As long as dimensionality is finite, even if the hypothesis class is infinite we can say things about how much data is needed to learn.
 
 ## Internal training
 
