@@ -35,7 +35,12 @@ VC stands for Vapnik-Chervonenkis - two people who related the largest set of in
 
 ## Internal training
 
+So for a problem such as:
 
+```
+X = \mathbb{R}
+H = {h(x)= x \in [a, b]}
+```
 
 ## Linear separators
 
