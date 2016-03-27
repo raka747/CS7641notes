@@ -45,7 +45,7 @@ Intuition: if k is small and k is big the problems isn't thata hard so it probab
 
 ### Issues with SLC
 
-
+Depending on the examples given and the distances you can wind up with "stringy" points where a single link between two seemingly obvious clusters gets created leading to non-intuitive clusters (from a human perspective)
 
 ## K-means clustering
 
