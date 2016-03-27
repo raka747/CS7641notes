@@ -82,4 +82,17 @@ For optimization problems we want to define a notion of a configuration, score, 
 - Scores - Ideally you want to not lose data so an idea for a score is how much error is introduced as a result of expressing the points as a cluster around the mean rather than as a point. E(P, center) = \sum || center_{P(x)} - x||_2^2
 - Neighborhood - P, center = {(P', center)} \union {(P, center')} union of sets where the partition is adjusted or where the center is adjusted.
 
-This resembles hill climbing. Each step works to optimize the score and minimizes the error
+This resembles hill climbing. Each step works to optimize the score and minimizes the error. A point only moves from one cluster to another if it causes the error to go down or the stays the same. When you re-center since you're taking the mean/centroid you're minimizing the least squared error. Monotonically non-increasing in error.
+
+You cannot reduce error forever because there are finite number of objects and there's a finite number or labels. Once you've chosen a label for each object the center is deterministically defined despite the fact that you're dealing with an infinite space. The caveat is that if you have a point that can go to more than one partition (equidistant) you need to break ties consistently. One rule is to possibly go to the "lowest" label.
+
+Converges in finite time.
+
+### Properties of K-means
+
+- Each iteration is polynomial O(kn) - Potentially an extra d for dimensions
+- Finite (exponential) iterations O(k^n) In practice it is consistent because while there each n point can be k labels distance provides a pretty hard constraint on the number of actual possible combinations for k labels and n points
+- Error decreases (if ties broken consistently) [with one exception]
+- Can get stuck!
+
+Random re-starts or picking "good" cluster centers that are separated from each other. Picking points to be clusters tends to work pretty well for separating centers whereas assigning each point a random label will frequently lead to centers that are very close to each other.
