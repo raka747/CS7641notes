@@ -49,3 +49,21 @@ Depending on the examples given and the distances you can wind up with "stringy"
 
 ## K-means clustering
 
+K-means avoids the "stringy" issue with SLC and has some other nice properties but there are trade-offs.
+
+Algorithm:
+
+1. Pick K centers (at random)
+2. Each center "claims" its closest points
+3. Recompute the centers by averaging the clustered points
+4. Repeat 2-4 until convergence.
+
+"Center" doesn't necessarily need to be a point in the dataset
+
+### K-means in Euclidean Space
+
+
+
+### K-means as optimization
+
+
