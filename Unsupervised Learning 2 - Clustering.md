@@ -71,9 +71,13 @@ center^t_i = \sum_{y \in c^t_i} y / |C_i|
 Algorithm
 center^0_i
 Partition: P^t(x) = argmin_i ||X - center^{t-1}_i||^2_2
-Centers center^t_i=\sum_{y\inC^t_i} y / |C_i|
+Centers: center^t_i=\sum_{y\inC^t_i} y / |C_i|
 ```
 
 ### K-means as optimization
 
+For optimization problems we want to define a notion of a configuration, score, and neighborhood. If k-means is an optimization problem:
 
+- Configurations - The configuration is which points belong to which partition. And related to that is the idea of the center of the partition.
+- Scores - Ideally you want to not lose data so an idea for a score is how much error is introduced as a result of expressing the points as a cluster around the mean rather than as a point. E(P, center) = \sum || center_{P(x)} - x||_2^2
+- Neighborhood - P, center = {(P', center)} \union {(P, center')} union of sets where the parition is adjusted or where the center is adjusted.
