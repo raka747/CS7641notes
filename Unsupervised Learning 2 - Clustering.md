@@ -36,7 +36,12 @@ Domain knowledge can be imparted by using appropriate distance and choosing whet
 
 ### Running time of SLC
 
+Run time of SLC is n^3
 
+Intuition: if k is small and k is big the problems isn't thata hard so it probably doesn't directly depend on k
+
+1. Repeaat k times (n/2)
+    a. look at all distances to find the closest pair (O(n^2)) that have different labels
 
 ### Issues with SLC
 
