@@ -42,6 +42,23 @@ X = \mathbb{R}
 H = {h(x)= x \in [a, b]}
 ```
 
+In this scenario you can label the points with VC dimension 1:
+
+```
+[] -
+  [+]
+```
+
+VC dimension 2:
+
+  [+   +]
+  [+]  -
+   -  [+]
+[] -   -
+
+But in trying to show vc dimension 3 this set of points is impossible to label: + - +. Therefore the VC dimension for this hypothesis space is only 2. To show a VC dimension of v is possible you need to go through a set of all possible labels for a set of v points and show that the hypothesis is capable of labeling them in all ways. However to show that a vc dimension is not possible you have to prove that for all configurations it is not possible to label.
+
+
 ## Linear separators
 
 

@@ -16,8 +16,10 @@ w^T and b are parameters of the plane
 
 So we want to find the separator that is the furthest from the data sets but is still consistent. In order to do wo we can plug in two points on the boundaries x_1 and x_2 that satisfy:
 
+```
 w^Tx_1 + b = 1
-x^Tx_2 + b = -1
+w^Tx_2 + b = -1
+```
 
 The difference between these 2 equations is:
 
