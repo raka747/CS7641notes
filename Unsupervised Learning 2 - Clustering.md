@@ -62,7 +62,17 @@ Algorithm:
 
 ### K-means in Euclidean Space
 
+```
+Define:
+P^t(x) : Partition/cluster of objext x
+C^t_i : Set of all points in cluster i = {x s.t. P(x)=i}
+center^t_i = \sum_{y \in c^t_i} y / |C_i|
 
+Algorithm
+center^0_i
+Partition: P^t(x) = argmin_i ||X - center^{t-1}_i||^2_2
+Centers center^t_i=\sum_{y\inC^t_i} y / |C_i|
+```
 
 ### K-means as optimization
 
