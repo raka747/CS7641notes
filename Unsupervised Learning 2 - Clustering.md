@@ -80,4 +80,6 @@ For optimization problems we want to define a notion of a configuration, score, 
 
 - Configurations - The configuration is which points belong to which partition. And related to that is the idea of the center of the partition.
 - Scores - Ideally you want to not lose data so an idea for a score is how much error is introduced as a result of expressing the points as a cluster around the mean rather than as a point. E(P, center) = \sum || center_{P(x)} - x||_2^2
-- Neighborhood - P, center = {(P', center)} \union {(P, center')} union of sets where the parition is adjusted or where the center is adjusted.
+- Neighborhood - P, center = {(P', center)} \union {(P, center')} union of sets where the partition is adjusted or where the center is adjusted.
+
+This resembles hill climbing. Each step works to optimize the score and minimizes the error
