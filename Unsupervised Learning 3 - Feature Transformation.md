@@ -11,3 +11,40 @@ the transformation is some matrix P^T x that is a linear combination of the orig
 Feature selection: {x_1, x_2, x_3, x_4} -> {x_1, x_2}
 
 Feature transformation {x_1, x_2, x_3, x_4} -> {2x_1 + x_2}
+
+## What are our features
+
+
+
+## Words like Tesla
+
+
+
+## Principal components analysis
+
+
+
+## Independent components analysis
+
+
+
+## Cocktail party problem
+
+
+
+## Matrix
+
+
+
+## PCA vs ICA
+
+
+
+## Alternatives
+
+
+
+## Summary
+
+
+
