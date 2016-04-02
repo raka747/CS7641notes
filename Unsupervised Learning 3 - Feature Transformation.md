@@ -30,12 +30,22 @@ Problems:
 
 Feature selection doesn't help
 
-## Words like Tesla
-
-
-
 ## Principal components analysis
 
+Eigenproblem
+
+Attempts to:
+
+- Maximize variance
+- Orthogonal
+
+Properties:
+- Global Algorithm
+- Best Reconstruction
+
+Transform into new space where feature selection can work
+
+0 eigenvalue implies ignorable
 
 
 ## Independent components analysis
