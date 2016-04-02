@@ -18,9 +18,17 @@ We've been doing feature transformation all along and individual learning algori
 
 Information Retrieval - the ad hoc problem (or the Google problem) given the and unknown (ad hoc) query you have to retrieve a relevant set of documents from a database containing many documents. Challenge is you can't do a lot of analysis on the storage up front because you don't know what the queries will be.
 
-## What are our features
+### What are our features?
 
+The features in the ad hoc information retrieval problems are? Words are the most basic feature one might use i.e. counts of words and plurals, singulars etc.
 
+Problems:
+
+- Lots of words
+- Words can have multiple meaning (polysemy) gives false positives
+- Many words mean the same thing (synonomy) doesn't show things due to false negatives
+
+Feature selection doesn't help
 
 ## Words like Tesla
 
