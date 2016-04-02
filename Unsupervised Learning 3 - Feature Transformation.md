@@ -12,6 +12,12 @@ Feature selection: {x_1, x_2, x_3, x_4} -> {x_1, x_2}
 
 Feature transformation {x_1, x_2, x_3, x_4} -> {2x_1 + x_2}
 
+### Why?
+
+We've been doing feature transformation all along and individual learning algorithms like layers of perceptrons and kernel functions have their own method of methods of feature transformation. So why do feature transformation on top of these?
+
+Information Retrieval - the ad hoc problem (or the Google problem) given the and unknown (ad hoc) query you have to retrieve a relevant set of documents from a database containing many documents. Challenge is you can't do a lot of analysis on the storage up front because you don't know what the queries will be.
+
 ## What are our features
 
 
