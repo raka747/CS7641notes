@@ -50,7 +50,14 @@ Transform into new space where feature selection can work
 
 ## Independent components analysis
 
+Comparison:
 
+- PCA attempts to find correlation, maximizing variance. Enables reconstruction
+- ICA attempts to find independence, make new features independent from each other and maximize mutual information between new features and old features
+
+The idea that there are a bunch of hidden variables in the world but we can only observe observable variables.
+
+Blind source separation problem (or cocktail party problem) pull out one source conversation from noise and other conversations. The humans and what they're saying represent the hidden variables. Microphones represent the observable variables.
 
 ## Cocktail party problem
 
