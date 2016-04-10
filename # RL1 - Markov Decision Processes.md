@@ -34,7 +34,7 @@ Even if something isn't necessarily Markovian it can be turned into something Ma
 
 Things are stationary - the rules or model does not change. The states aren't stationary, but the rules behind the world are stationary.
 
-In a supervised learning scenario you would receive <s, a> and try to learn the right a to take given a state s. In a Markov decision world we see <s, a, r> and this ends up being a very different problem to find the optimal policy (pi*) to produce actions to take.
+In a supervised learning scenario you would receive \<s, a\> and try to learn the right a to take given a state s. In a Markov decision world we see \<s, a, r\> and this ends up being a very different problem to find the optimal policy (pi*) to produce actions to take.
 
 ## Rewards
 
