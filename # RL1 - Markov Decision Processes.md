@@ -36,6 +36,8 @@ Things are stationary - the rules or model does not change. The states aren't st
 
 In a supervised learning scenario you would receive \<s, a\> and try to learn the right a to take given a state s. In a Markov decision world we see \<s, a, r\> and this ends up being a very different problem to find the optimal policy (pi*) to produce actions to take.
 
+Policies differs from plans. Policies can tell you what to do no matter state you are in whereas a plan is a concrete set of actions to take over the next series of time steps.
+
 ## Rewards
 
 
