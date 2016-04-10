@@ -9,7 +9,12 @@ Three types of learning:
 
 ## The world
 
-
+Gridworld is a commonly used problem setting for reinforcement learning problems. Consists of:
+- Start cell
+- Normal cells
+- Walls and blocked of cells
+- Goal cell(s)
+- "Lose" cell(s)
 
 ## Markov Decision Processes
 
