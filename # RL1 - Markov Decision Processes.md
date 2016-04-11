@@ -50,6 +50,12 @@ Actions move you to states that can lead to other actions and after some time yo
 
 This is called the **credit assignment** problem or also the **Temporal Credit Assignment** problem due to the often temporal nature of state, action, reward triples.
 
+### Rewards in Grid world
+
+Rewards can be used to structure the problem. i.e. a small negative reward for each state other than the goal state and lose state in grid world will motivate the agent to move towards the absorption states.
+
+Changes in reward policy can cause changes to the policy.
+
 ## Sequences of Rewards
 
 
