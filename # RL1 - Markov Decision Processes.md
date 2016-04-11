@@ -40,7 +40,15 @@ Policies differs from plans. Policies can tell you what to do no matter state yo
 
 ## Rewards
 
+What makes MDP's different from SL?
 
+- Not just rewards
+- Delayed rewards. 
+- Minor changes matter
+
+Actions move you to states that can lead to other actions and after some time you "learn" the final outcome is positive or negative. A positive outcome could be due to good actions all throughout or mostly mediocre actions with a few brilliant actions. Part of the MDP problem is determining the exact actions that lead to positive outcomes.
+
+This is called the **credit assignment** problem or also the **Temporal Credit Assignment** problem due to the often temporal nature of state, action, reward triples.
 
 ## Sequences of Rewards
 
