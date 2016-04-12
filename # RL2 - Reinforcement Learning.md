@@ -1,5 +1,11 @@
 # RL1 - Reinforcement Learning
 
+Think of RL as a API (Application Programmer Interface)
+
+model (T, R) -> Planner -> Policy
+
+Transitions \<s, a, r, s' \>* -> Learner -> polict
+
 ## API
 
 
