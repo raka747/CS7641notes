@@ -136,7 +136,9 @@ Alternative:
 
 1. Start with pi_0 <- guess
 2. Evaluate: Given pi_t calculate U_t = U^{p}i_t}
-3. Improve py_{t+1} = argmax_a \sum{T(s, a, s') U_t(s')})
+3. Improve pi_{t+1} = argmax_a \sum{T(s, a, s') U_t(s')}
+
+We can calculate this because U_t(s) = R(s) + \gamma \sum_s' T(s, a, s') U(s')
 
 ## Summary
 
