@@ -106,14 +106,37 @@ pi * (s) = argmax_a \sum_s' T(s, a, s') U(s')
 
 Note that U(s) is congruent to U^pi* (S)
 
-U(s) = R(s) + \gamma argmax_a \sum_s' T(s, a, s') U(s')
+U(s) = R(s) + \gamma max_a \sum_s' T(s, a, s') U(s')
 ```
 
 This equation is Bellman's Equation. The most important equation
 
 ## Finding Policies
 
+```
+U(s) = R(s) + \gamma max_a \sum_s' T(s, a, s') U(s')
+```
 
+Has n equations (for the n states) and also has n unknowns! However the max is a non-linear function so it can't be solved with a standard regression / linear algebra method.
+
+Algorithm to find utilities:
+1. Start with arbitrary utilities
+2. Update utilities based on neighbors
+3. Repeat until convergence (step 2)
+
+So at each step 2 we calculate R(s) + \gamma max_a \sum_s' T(s, a, s') \hat{U}(s') where \hat{U} is our current estimate of the utility for state s'
+
+How does this converge? Because the initial \hat{U} were all made up? It's able to converge because the R(s) is a true reward and by repeating these estimates R(s) is getting propagated to neighboring states enabling better prediction of \hat{U}
+
+This algorithm is called **value iteration**.
+
+Repeating value iteration over grid world allows the utility to propagate from the absorber states to the other cells but it's also important to note that ultimately utility is nice but it's more information then necessary since policy is just looking for the max utility.
+
+Alternative:
+
+1. Start with pi_0 <- guess
+2. Evaluate: Given pi_t calculate U_t = U^{p}i_t}
+3. Improve py_{t+1} = argmax_a \sum{T(s, a, s') U_t(s')})
 
 ## Summary
 
