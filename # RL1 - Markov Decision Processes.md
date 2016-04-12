@@ -54,11 +54,14 @@ This is called the **credit assignment** problem or also the **Temporal Credit A
 
 Rewards can be used to structure the problem. i.e. a small negative reward for each state other than the goal state and lose state in grid world will motivate the agent to move towards the absorption states.
 
-Changes in reward policy can cause changes to the policy.
+Changes in reward policy can cause changes to the policy. i.e a strong positive reward for every state will cause the agent to avoid any end state. A strong negative reward for every state will cause the agent to prioritize any end state even if it has a small negative reward.
 
 ## Sequences of Rewards
 
+Assumptions of grid world:
 
+- Infinite horizons - previously we assumed we can take an infinite number of steps, so we may take longer safer routes to wind up at a horizon. If we only have a limited number of steps left we may take a shorter riskier path to the goal. Time horizons also change the policy for the state given the time horizon.
+- Utility of sequences - if U(s_0, s_1, s_2, ...) > U(s_0, s_1', s_2', ...) then U(s_1, s_2, ...) > U(s_1', s_2', ...). If the utility of one sequence is greater than another sequence and they both start from the same starting state, then the greater than relationship still exists if both sequences had the starting state removed. This stationary preference leads to a notion that utility can calculated by summing rewards.
 
 ## Assumptions
 
