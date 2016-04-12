@@ -100,6 +100,16 @@ U^pi (s) = \forall[\sum_t {\gamma^tR(s_t)} | pi, s_0 = s]
 
 Note that R(s) != U^pi(s) because reward is the immediate feedback. Utility is long term as expected reward. This enables us to account for delayed reward.
 
+```
+This leads to the optimal policy:
+pi * (s) = argmax_a \sum_s' T(s, a, s') U(s')
+
+Note that U(s) is congruent to U^pi* (S)
+
+U(s) = R(s) + \gamma argmax_a \sum_s' T(s, a, s') U(s')
+```
+
+This equation is Bellman's Equation. The most important equation
 
 ## Finding Policies
 
