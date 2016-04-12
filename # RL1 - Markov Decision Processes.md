@@ -71,6 +71,8 @@ In order to change this we can change our utility function to U(s_0, s_1, ...) =
 
 This leads to U(s) <= \sum_{t=0}^{\inf} gamma^t R_MAX = R_MAX / (1 - gamma). Buy including this tuition this enables us to maintain infinite horizons and utility of sequences but enables a finite a bound on rewards
 
+## Assumptions
+
 Proof on R_MAX / (1 - gamma)
 
 ```
@@ -82,14 +84,21 @@ x = \gamma^0 + \gamma * x
 x - \gamma * x = 1
 x ( 1 - \gamma) = 1
 x = 1 / (1 - \gamma)
+Therefore:
 R_MAX / (1 - gamma)
-
-## Assumptions
-
-
+```
 
 ## Policies
 
+```
+Trying to find:
+pi * = argmax_pi \forall[\sum_t {\gamma^tR(s_t)} | pi]
+
+Utility is defined as:
+U^pi (s) = \forall[\sum_t {\gamma^tR(s_t)} | pi, s_0 = s]
+```
+
+Note that R(s) != U^pi(s) because reward is the immediate feedback. Utility is long term as expected reward. This enables us to account for delayed reward.
 
 
 ## Finding Policies
