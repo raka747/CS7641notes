@@ -63,9 +63,13 @@ The biggest assumption is stationary. This implies two assumptions of grid world
 - Infinite horizons - previously we assumed we can take an infinite number of steps, so we may take longer safer routes to wind up at a horizon. If we only have a limited number of steps left we may take a shorter riskier path to the goal. Time horizons also change the policy for the state given the time horizon.
 - Utility of sequences - if U(s_0, s_1, s_2, ...) > U(s_0, s_1', s_2', ...) then U(s_1, s_2, ...) > U(s_1', s_2', ...). If the utility of one sequence is greater than another sequence and they both start from the same starting state, then the greater than relationship still exists if both sequences had the starting state removed. This stationary preference leads to a notion that utility can calculated by summing rewards.
 
-In math this implies U(s_0, s_1, ...) = \sum_{t=0}^{\inf} = R(s_t)
+In math this implies U(s_0, s_1, ...) = \sum_{t=0}^{\inf} R(s_t)
 
 But this doesn't work. For example a sequence of receiving only a reward of 1 every time step vs a sequence of receiving 1 and occasionally 2 reward every time step results in equivalent rewards when taken to infinity. This is paradoxical because there is the intuition that occasionally receiving a reward of 2 should be better than never receiving the reward.
+
+In order to change this we can change our utility function to U(s_0, s_1, ...) = \sum_{t=0}^{\inf} gamma^t R(s_t) where 0 <= gamma < 1. This causes the gamma^t to fall to 0.
+
+This leads to U(s) <= \sum_{t=0}^{\inf} gamma^t R_MAX = R_MAX / (1 - gamma). Buy including this tuition this enables us to maintain infinite horizons and utility of sequences but enables a finite a bound on rewards
 
 ## Assumptions
 
