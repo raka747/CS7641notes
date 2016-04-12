@@ -71,6 +71,19 @@ In order to change this we can change our utility function to U(s_0, s_1, ...) =
 
 This leads to U(s) <= \sum_{t=0}^{\inf} gamma^t R_MAX = R_MAX / (1 - gamma). Buy including this tuition this enables us to maintain infinite horizons and utility of sequences but enables a finite a bound on rewards
 
+Proof on R_MAX / (1 - gamma)
+
+```
+\sum_{t=0}^{\inf} {\gamma^t R_MAX}
+= R_MAX * \sum_{t=0}^{\inf} {\gamma^t} 
+
+let x = \sum_{t=0}^{\inf} {\gamma^t} 
+x = \gamma^0 + \gamma * x
+x - \gamma * x = 1
+x ( 1 - \gamma) = 1
+x = 1 / (1 - \gamma)
+R_MAX / (1 - gamma)
+
 ## Assumptions
 
 
