@@ -138,8 +138,20 @@ Alternative:
 2. Evaluate: Given pi_t calculate U_t = U^{p}i_t}
 3. Improve pi_{t+1} = argmax_a \sum{T(s, a, s') U_t(s')}
 
-We can calculate this because U_t(s) = R(s) + \gamma \sum_s' T(s, a, s') U(s')
+We can calculate this because U_t(s) = R(s) + \gamma \sum_s' T(s, pi_t(s), s') U(s')
+
+This transforms the situation to n linear equations with n unknowns which can be solved with matrices!
+
+This is still possibly quite expensive to do matrix inversion on n states so it maybe clever to mix the methods depending on which one can converge faster or be calculated faster.
+
+This is called **policy iteration**
 
 ## Summary
 
-
+MDPs
+Consists of states, rewards, actions, transitions, (discount - some consider part of the problem, some consider part of the algorithm)
+Policies
+Value functions (utilities) - utilities are long term as opposed to short term rewards
+Discounting - allows us tackle finite world within infinite horizon
+Stationarity
+All tied together in Bellman equation - which can be solved using value iteration and policy iteration
