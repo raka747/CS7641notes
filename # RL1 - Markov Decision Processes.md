@@ -58,10 +58,14 @@ Changes in reward policy can cause changes to the policy. i.e a strong positive 
 
 ## Sequences of Rewards
 
-Assumptions of grid world:
+The biggest assumption is stationary. This implies two assumptions of grid world:
 
 - Infinite horizons - previously we assumed we can take an infinite number of steps, so we may take longer safer routes to wind up at a horizon. If we only have a limited number of steps left we may take a shorter riskier path to the goal. Time horizons also change the policy for the state given the time horizon.
 - Utility of sequences - if U(s_0, s_1, s_2, ...) > U(s_0, s_1', s_2', ...) then U(s_1, s_2, ...) > U(s_1', s_2', ...). If the utility of one sequence is greater than another sequence and they both start from the same starting state, then the greater than relationship still exists if both sequences had the starting state removed. This stationary preference leads to a notion that utility can calculated by summing rewards.
+
+In math this implies U(s_0, s_1, ...) = \sum_{t=0}^{\inf} = R(s_t)
+
+But this doesn't work. For example a sequence of receiving only a reward of 1 every time step vs a sequence of receiving 1 and occasionally 2 reward every time step results in equivalent rewards when taken to infinity. This is paradoxical because there is the intuition that occasionally receiving a reward of 2 should be better than never receiving the reward.
 
 ## Assumptions
 
