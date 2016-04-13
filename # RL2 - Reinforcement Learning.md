@@ -146,6 +146,19 @@ Q-learning is a family of algorithms that vary along
 
 This last possibility has the ability to learn and avoid local minimum and uses what it learns!
 
-## Greedy Exploration
+## Epsilon Greedy Exploration
+
+If GLIE (Greedy within the Limit with infinite Exploration or basically a decayed epsilon) two things happen:
+
+- Q hat -> Q
+- pi hat -> pi *
+
+Exploration-Exploitation dilemma - Exploration is about getting the data that you need (learning) and exploitation is about actually using what you learned. The dilemma exists because there is only one agent interacting with the world with conflicting actions.
+
+Exploration and exploitation dilemma come up in other scenarios and in model-based learning you can keep track of what you know and to what degree you know it.
+
+Exploration Exploitation is the fundamental trade-off in reinforcement learning. Learning is well studied within Machine learning, planning is well studied in planning and scheduling so reinforcement learning really adds to this because learning and planning interact and depend on each other
+
+## Summary
 
 
