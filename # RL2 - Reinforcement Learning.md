@@ -89,8 +89,24 @@ V <-^{\alpha} x
 
 is equivalent to:
 v <- (1 - \alpha) v + \alpha x
+```
 
-## Estimating Q from Transitions
+### Learning incrmentally
+
+V_t <-^{\alpha_t} X_t
+
+where x_t is a random variable and alpha_t has the properties that
+
+```
+\sum_{t=1}^{inf} \alpha_t = inf and
+\sum_{t=1}^{inf} \alpha_t^2 < inf
+
+which works for say alpha_t = 1 / t (1/t -> ln(t), 1/t^2 = pi^2 / 6)
+```
+
+Over time v converges to the expected value of x
+
+## X Q from Transitions
 
 
 
