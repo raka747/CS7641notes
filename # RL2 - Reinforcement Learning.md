@@ -4,7 +4,7 @@ Think of RL as a API (Application Programmer Interface)
 
 model (T, R) -> Planner -> Policy
 
-Transitions \<s, a, r, s''>* -> Learner -> Policy
+Transitions \<s, a, r, s'>* -> Learner -> Policy
 
 Solving an MDP takes models and turns them into policies.
 
@@ -22,13 +22,27 @@ model -> simulator -> transitions
 
 This leads to the idea of different possible ways of gluing the APIs together to do reinforcement learning:
 
-RL-based planner???: Model -> Simulator -> Transitions -> Learner -> Policy
+RL-based planner*???: Model -> Simulator -> Transitions -> Learner -> Policy
 
 Model-based RL: Transitions -> Modeler -> Model -> Planner -> Policy
 
+* No common name in the field but a famous example is TDGammon by Tesauro that used a simulator to learn to play Backgammon
+
 ## Approaches to RL
 
+policy: s -> pi -> a
 
+Policy search algorithms: Directly use what you learn but learning is indirect and hence difficult due to the temporal credit assignment problem. The data set doesn't contain the actions you should take.
+
+utility / value: s -> u -> v
+
+Value-function based algorithms. It's possible to learn more about the world and estimate the utility as far as learning goes but it can be tricky turning this into a policy via a max function and some usage of the Bellman's equations.
+
+s, a -> T, R -> s', r
+
+Model based algorithm. If we can learn T (transition models) and R (rewards) then we can solve the Bellman's equations to get utility and then argmax that to get policy. This is the most direct as far learning goes but it's computationally indirect to turn the results of the learning into a policy.
+
+Focus on the middle scenario: value based approaches!
 
 ## A new kind of Value function
 
