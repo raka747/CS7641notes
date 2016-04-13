@@ -63,6 +63,13 @@ Q(s, a) = R(s) + \gamma \sum_{s'} {T(s, a, s')max_a' Q(s', a')
 
 Value for arriving in S, leaving via a, proceeding optimally thereafter. Similar to Utility which is reard of the state + optimal utility thereafter, however Q ties you to action a.
 
+U and pi can be definied via Q:
+
+```
+U(s) = max_a Q(s, a)
+pi(s) = argmax_a Q(s, a)
+```
+
 ## Q Learning
 
 
