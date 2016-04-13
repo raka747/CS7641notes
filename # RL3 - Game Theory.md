@@ -58,19 +58,15 @@ Mini-poker game description:
     - Black can resign: +10
     - B can see: +30
 
-This can be expressed in a matrix taking into account the expected  outcomes. However whether you do minimax (from A's perspective) or maximin (from B's perspective) yields different results for the outcome of the game. And this breaks Von Neumann's theorem.
+This can be expressed in a matrix taking into account the expected  outcomes. However whether you do minimax (from A's perspective) or maximin (from B's perspective) yields different results for the outcome of the game. And this breaks Von Neumann's theorem. Ultimately consistency can be exploited by the opposite player, so pure strategies are no longer viable.
 
 ## Mixed Strategies
 
+A mixed strategy implies a distribution over strategies. i.e.  in the above game P probability of being a holder.
 
+## Lines and Center Game
 
-## Lines
-
-
-
-## Center Game
-
-
+When using a mixed strategy between 2 options for both players one can examine one of the players as deterministic and calculate the outcome as a function of the other probabilistic player's probability of picking a strategy. The maximin of the two functions of the two deterministic possibilities gives the ultimate outcome of the scenario or game.
 
 ## Snitch
 
