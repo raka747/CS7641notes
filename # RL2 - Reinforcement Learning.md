@@ -122,6 +122,15 @@ The first step of the analysis is... questionable... because Q hat changes over 
 
 ## Q Learning Convergence
 
+```
+Q hat starts anywhere
+\hat{Q} (s, a) <-_{\alpha_t} r + max_{a'} \hat{Q} (s', a')
+
+then: \hat{Q} (s, a) -> Q(s, a)
+if s, a visited infinitely often
+\sum_t \alpha_t = inf, \sum_t \alpha_t^2 < inf
+s' ~ T(s, a, s'), r ~ R(s)
+```
 
 
 ## Choosing Actions
