@@ -46,7 +46,22 @@ Focus on the middle scenario: value based approaches!
 
 ## A new kind of Value function
 
+The old value function
 
+```
+U(s) = R(s) + \gamma max_a \sum_{s'} {T(s, a, s') U(s')}
+\pi(s) = argmax_a \sum_{s'} {T(s, a, s') U(s')}
+```
+
+Utility = reward + discounted future reward. Policy chooses the action that leads to the highest expected utility.
+
+Q function (sometimes quality):
+
+```
+Q(s, a) = R(s) + \gamma \sum_{s'} {T(s, a, s')max_a' Q(s', a')
+```
+
+Value for arriving in S, leaving via a, proceeding optimally thereafter. Similar to Utility which is reard of the state + optimal utility thereafter, however Q ties you to action a.
 
 ## Q Learning
 
