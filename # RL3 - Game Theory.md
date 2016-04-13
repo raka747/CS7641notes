@@ -17,6 +17,10 @@ Two agents A & B. Game Tree, 2  nodes representing states, edges representing ac
 
 This is a 2 player  zero sum finite deterministic game of perfect information.
 
+This is the simplest possible game. In MDP we had policies. In Game Theory we have strategies.
+
+Ultimately though, a game can be captured in a matrix of all strategies a and b can choose along the axes of the matrix and the outcome of the games per those strategies as the cells of the matrix.
+
 ## Minimax
 
 
