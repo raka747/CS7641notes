@@ -23,11 +23,13 @@ Ultimately though, a game can be captured in a matrix of all strategies a and b 
 
 ## Minimax
 
-
+A must consider the worst case counter and B must consider the worst case as well. So ultimately A attempts to maximizes considering B is minimax - hence the minimax algorithm. Alpha beta is a more efficient way of finding the exact same solution of minimax. 
 
 ## Fundamental Result
 
+Theorem: In a 2-player, zero-sum, deterministic game of perfect information minimax (=maximin)... and there always exists an optimal pure strategy for each player.
 
+Optimal is rational. I'm attempting to maximize my reward and everyone else is attempting to maximize their reward and everyone know this about everyone.
 
 ## Game Tree
 
