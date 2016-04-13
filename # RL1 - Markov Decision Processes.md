@@ -92,10 +92,12 @@ R_MAX / (1 - gamma)
 
 ```
 Trying to find:
-pi * = argmax_pi \forall[\sum_t {\gamma^tR(s_t)} | pi]
+pi * = argmax_pi E[\sum_t {\gamma^tR(s_t)} | pi]
 
 Utility is defined as:
-U^pi (s) = \forall[\sum_t {\gamma^tR(s_t)} | pi, s_0 = s]
+U^pi (s) = E[\sum_t {\gamma^tR(s_t)} | pi, s_0 = s]
+
+E[] - Expected value
 ```
 
 Note that R(s) != U^pi(s) because reward is the immediate feedback. Utility is long term as expected reward. This enables us to account for delayed reward.

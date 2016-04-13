@@ -104,15 +104,21 @@ where x_t is a random variable and alpha_t has the properties that
 which works for say alpha_t = 1 / t (1/t -> ln(t), 1/t^2 = pi^2 / 6)
 ```
 
-Over time v converges to the expected value of x
+Over time v converges to the expected value of x (E[x])
 
-## X Q from Transitions
+## Estimating Q from Transitions
 
+So ultimately:
 
+```
+\hat{Q}(s, a) <-^{\alpha} r + \gamma max_{a'} \hat{Q} (s', a')
 
-## Learning incrementally
+= E[r + \gamma max_{a'} \hat{Q} (s', a')]
+= R(s) \gamma E_{s'} [max_{a'} \hat{Q} (s', a')]
+= R(s) \gamma \sum_{s'} T(s, a, s') \hat{Q}(s', a')
+```
 
-
+The first step of the analysis is... questionable... because Q hat changes over time but there is a theorem that proves it actually converges
 
 ## Q Learning Convergence
 
