@@ -161,4 +161,11 @@ Exploration Exploitation is the fundamental trade-off in reinforcement learning.
 
 ## Summary
 
+- Learn how to solve an MDP- Do not know T and R, can only interact via s, a, r, s'
+- Approaches to RL
+- Connection to planning
+- Connection to function approximation, generalizing
+- Q-learning: Convergence, family of algorithms, different behaviors and trade offs
+- Exploration-Exploitation
 
+One extra way to explore / exploit trade off is set all Q hats to be the maximal value (optimism in the face of uncertainty) and it explores many things as it eliminates actions and depresses them to their "actual" value
