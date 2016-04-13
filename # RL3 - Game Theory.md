@@ -33,7 +33,7 @@ Optimal is rational. I'm attempting to maximize my reward and everyone else is a
 
 ## Game Tree
 
-
+More complex scenario: 2-player, zero-sum, non-deterministic game of perfect information. In this scenario there is chance involved, so it is slightly more complicated.
 
 ## Von Neumann
 
