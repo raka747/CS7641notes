@@ -40,7 +40,7 @@ The matrix doesn't enable to perform an exact reconstruction of the precise tree
 
 ## Von Neumann
 
-Von Neumann's Theorem applies again: via minimax there always exists an optimal pure strategy for each player.
+Von Neumann's Theorem applies again: via minimax = maximin and there always exists an optimal pure strategy for each player.
 
 ## Mini-poker
 
@@ -54,6 +54,11 @@ Mini-poker game description:
     - B sees:
         - if red: -40
         - if black + 30
+- If A is dealt a  back card and holds
+    - Black can resign: +10
+    - B can see: +30
+
+This can be expressed in a matrix taking into account the expected  outcomes. However whether you do minimax (from A's perspective) or maximin (from B's perspective) yields different results for the outcome of the game. And this breaks Von Neumann's theorem.
 
 ## Mixed Strategies
 
