@@ -35,9 +35,12 @@ Optimal is rational. I'm attempting to maximize my reward and everyone else is a
 
 More complex scenario: 2-player, zero-sum, non-deterministic game of perfect information. In this scenario there is chance involved, so it is slightly more complicated.
 
+The matrix doesn't enable to perform an exact reconstruction of the precise tree that produced the matrix however it ultimately doesn't matter as far as determining which strategy will be picked
+
+
 ## Von Neumann
 
-
+Von Neumann's Theorem applies again: via minimax there always exists an optimal pure strategy for each player.
 
 ## Minipoker
 
