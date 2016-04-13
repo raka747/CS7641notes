@@ -141,7 +141,10 @@ Q-learning is a family of algorithms that vary along
     - Dumb: always choose the same action (won't learn)
     - Could pick a random actions independent of what we're learning... (won't use what you learned)
     - Use Q hat (will use it) possible issues depending on how Q hat is initialized i.e if for all Q hat (s, a_0) is great and for all s, a != a_0 Q hat (s, a) is worse than the actual Q(s, a_0). Greedy but with a local min
-    - Random restarts!
+    - Random restarts! (slow)
+    - "simulated annealing" like approach of randomly taking actions sometimes i.e. pi hat = argmax_a Q_hat(s, a) with probability 1 - epsilon and with probability epsilon taking other actions
+
+This last possibility has the ability to learn and avoid local minimum and uses what it learns!
 
 ## Greedy Exploration
 
