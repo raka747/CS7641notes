@@ -132,10 +132,16 @@ if s, a visited infinitely often
 s' ~ T(s, a, s'), r ~ R(s)
 ```
 
-
 ## Choosing Actions
 
-
+Q-learning is a family of algorithms that vary along
+- How to initialize Q hat?
+- How to decay alpha_t?
+- How to choose actions?
+    - Dumb: always choose the same action (won't learn)
+    - Could pick a random actions independent of what we're learning... (won't use what you learned)
+    - Use Q hat (will use it) possible issues depending on how Q hat is initialized i.e if for all Q hat (s, a_0) is great and for all s, a != a_0 Q hat (s, a) is worse than the actual Q(s, a_0). Greedy but with a local min
+    - Random restarts!
 
 ## Greedy Exploration
 
