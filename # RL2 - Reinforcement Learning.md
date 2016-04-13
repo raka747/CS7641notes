@@ -72,7 +72,23 @@ pi(s) = argmax_a Q(s, a)
 
 ## Q Learning
 
+Q learning estimates the value of the Q function based on transitions and reward. However because it's reinforcement learning and not an MDP, we don't have R.
 
+```
+\<s, a, r, s'\>: \hat{Q}(s, a) <-^{\alpha} r + \gamma max_{a'} \hat{Q} (s', a')
+```
+
+The transition is the starting in stat s, taking action a and winding up with reward r and in state s'
+
+We update Q by some learning rate alpha based on the imeediate reward r and discounted estimated value of the next state (\hat{Q}) because max_{a'} \hat{Q} (s', a') overall is the utility of the next state and the overall update represents the utility of the state.
+
+Note that:
+
+```
+V <-^{\alpha} x
+
+is equivalent to:
+v <- (1 - \alpha) v + \alpha x
 
 ## Estimating Q from Transitions
 
