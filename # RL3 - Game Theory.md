@@ -13,7 +13,9 @@ Ways of thinking when you're not the only thing thinking with intention i.e. the
 
 ## A simple game
 
-Two agents A & B. Game Tree, 2  nodes representing states, edges representing actions.
+Two agents A & B. Game Tree, 2  nodes representing states, edges representing actions. Leaves = A's reward & B's - reward.
+
+This is a 2 player  zero sum finite deterministic game of perfect information.
 
 ## Minimax
 
