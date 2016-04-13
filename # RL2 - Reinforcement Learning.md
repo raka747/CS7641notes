@@ -1,4 +1,4 @@
-# RL1 - Reinforcement Learning
+# RL2 - Reinforcement Learning
 
 Think of RL as a API (Application Programmer Interface)
 
