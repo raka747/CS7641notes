@@ -42,9 +42,18 @@ The matrix doesn't enable to perform an exact reconstruction of the precise tree
 
 Von Neumann's Theorem applies again: via minimax there always exists an optimal pure strategy for each player.
 
-## Minipoker
+## Mini-poker
 
+An even more complex scenario: 2-player, zero-sum, non-deterministic game of hidden information
 
+Mini-poker game description:
+- A is dealt a card, red or black 50%
+- A may resign if red: -20 for A
+- Else A holds
+    - B resigns: + 10
+    - B sees:
+        - if red: -40
+        - if black + 30
 
 ## Mixed Strategies
 
