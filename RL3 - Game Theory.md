@@ -81,13 +81,15 @@ The Matrix:
 | A cooperates   | (-1, -1)         | (-9, 0)    |
 | A defects      | (0, -9)          | (-6, -6)   |
 
-The "beset" outcome on average for both prisoners is to both cooperate and between both of them they spend the least time in prison.
+The "best" outcome on average for both prisoners is to both cooperate and between both of them they spend the least time in prison.
 
 Based on the above "costs" or "rewards" it makes sense however it always makes sense to always defect instead of cooperate. If the other person cooperates defecting is the difference between spending one month in jail or spending no time in jail. If B defects, it's the option to spend 9 months in jail versus 6 months in jail. This dominance of defecting always being the better option results in the "worst" outcome though.
 
 ## A Beautiful Equilibrium
 
+N players with strategies S_1, S_2, ... S_n
 
+S_1* \in S_1, S_2* \in S_2, ..., S_1n* \in S_n
 
 ## 2 Step
 
