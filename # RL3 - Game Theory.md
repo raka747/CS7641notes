@@ -77,7 +77,6 @@ Prisoner's dilemma: 2 criminals caught and put in separate jails. Each person is
 The Matrix:
 
 |                | B Cooperates     | B Defects  | 
-| -------------- | ---------------- | ---------- | 
 | A cooperates   | (-1, -1)         | (-9, 0)    |
 | A defects      | (0, -9)          | (-6, -6)   |
 
