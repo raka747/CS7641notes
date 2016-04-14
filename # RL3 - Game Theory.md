@@ -70,6 +70,18 @@ When using a mixed strategy between 2 options for both players one can examine o
 
 ## Snitch
 
+Relaxing even more things! 2-player, non-zero-sum, non-deterministic game of hidden information.
+
+Prisoner's dilemma: 2 criminals caught and put in separate jails. Each person is given the option to snitch on the other guy.
+
+The Matrix:
+
+|                | B Cooperates     | B Defects  | 
+| -------------- | ---------------- | ---------- | 
+| A cooperates   | (-1, -1)         | (-9, 0)    |
+| A defects      | (0, -9)          | (-6, -6)   |
+
+
 
 
 ## A Beautiful Equilibrium
