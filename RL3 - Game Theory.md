@@ -91,6 +91,10 @@ N players with strategies S_1, S_2, ... S_n
 
 S_1* \in S_1, S_2* \in S_2, ..., S_1n* \in S_n
 
+are a Nash equilibrium iff for all S_i* = argmax_si utility_i(S_1*, S_2*, ... S_n*)
+
+no reason for anyone to change strategies
+
 ## 2 Step
 
 
