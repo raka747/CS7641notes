@@ -110,6 +110,10 @@ In order to flesh out this you could possibly make an extended matrix to account
 
 However... It doesn't matter. In the final game there is only one game left and all of the previous games are sunk costs. Therefore it is determined that the players will end up in the -6, -6 step. And since we know the outcome of the final game therefore the n-1 game is the "final" game. Therefore proof by induction dictates that we'll always deduct.
 
+If you have an n repeated game then the n repeated Nash equilibrium is solution.
+
+If you're in a Nash equilibrium you won't leave the Nash equilibrium but it's possible to have multiple Nash equilibriums but determining which equilibrium you'll wind up in is beyond the scope of the course.
+
 ## Summary
 
 
