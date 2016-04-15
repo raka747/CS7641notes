@@ -100,11 +100,15 @@ This can applies to pure and mixed strategies.
 Some theorems as a result of Nash Equilibrium:
 - In the n-player pure strategy game, if equilibrium of strictly dominated strategies eliminates all but one combination, that combination is the Nash Equilibrium (done iteratively possibly)
 - Any Nash Equilibrium will survive elimination of strictly dominated strategies
-- If n is finite and for all i, S_i is finite there exists a (mixed) Nash Equilibrium
+- If n (number of players) is finite and for all i, S_i is finite (finite number of strategies for each player) there exists a (mixed) Nash Equilibrium
 
 ## 2 Step
 
+Two step prisoner's dilemma. If you encounter multiple prisoner's dilemmas, then perhaps it's in your interest to cooperate as a signal to the other player that you're the type to cooperate so that the overall cost to you is reduced (i.e. 2x -1 cost instead of 2x -6 cost)
 
+In order to flesh out this you could possibly make an extended matrix to account steps and for people's behaviors in other steps.
+
+However... It doesn't matter. In the final game there is only one game left and all of the previous games are sunk costs. Therefore it is determined that the players will end up in the -6, -6 step. And since we know the outcome of the final game therefore the n-1 game is the "final" game. Therefore proof by induction dictates that we'll always deduct.
 
 ## Summary
 
