@@ -93,7 +93,14 @@ S_1* \in S_1, S_2* \in S_2, ..., S_1n* \in S_n
 
 are a Nash equilibrium iff for all S_i* = argmax_si utility_i(S_1*, S_2*, ... S_n*)
 
-no reason for anyone to change strategies
+no reason for anyone to change strategies.
+
+This can applies to pure and mixed strategies.
+
+Some theorems as a result of Nash Equilibrium:
+- In the n-player pure strategy game, if equilibrium of strictly dominated strategies eliminates all but one combination, that combination is the Nash Equilibrium (done iteratively possibly)
+- Any Nash Equilibrium will survive elimination of strictly dominated strategies
+- If n is finite and for all i, S_i is finite there exists a (mixed) Nash Equilibrium
 
 ## 2 Step
 
