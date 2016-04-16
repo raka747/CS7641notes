@@ -116,4 +116,15 @@ If you're in a Nash equilibrium you won't leave the Nash equilibrium but it's po
 
 ## Summary
 
-
+- Game Theory is depressing
+- Change the game i.e. if the utilities were different then the equilibrium that was discussed might change
+- Mechanism design - changing utility to encourage different behaviors
+- Game as a tree
+- Game as a matrix - the matrix is all that is needed
+- Minimax
+- Hidden/Perfect
+- (Non) zero sum
+- (Non) deterministic
+- Strategies: Pure vs Mixed
+- Prisoner's Dilemma
+- Nash
