@@ -167,11 +167,25 @@ But this isn't a Nash equlibrium. One of the agents can switch to going to the c
 
 ## Stochastic Games
 
+Stochastic game:
+
+- S: states s
+- A_i: Actions for player_i a, b a \in A_1 b \in A_2
+- T: Transitions T(s, (a, b), s')
+- R_i: Rewards for player i R_1(s, (a, b)), R_2(s, (a, b))
+- \gamma: Discount \gamma
 
 Described by Shapley. Actually published before Bellman published on MDP.
 
 ## Models & Stochastic Games
 
+Stochastic games is a generalization of other models:
+
+If R_1 = -R_2 it becomes a zero-sum game
+
+If T(s, (a, b), s') = T(s, (a, b'), s') for all b' and R_2(s, (a, b)) = 0, and R_1(s, (a, b)) = R_1(s, (a, b')) for all b' then it becomes an MDP
+
+If |S| = 1 then it becomes a repeated game.
 
 
 ## Zero-Sum Stochastic Games
