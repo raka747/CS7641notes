@@ -132,9 +132,15 @@ Pavlov is nash! Both start of cooperating and stay cooperating.
 
 You can give it any starting sequence (CC, CD, DC, DD) and it will eventually transition to CC state. This means it's subgame perfect!
 
+Pavlov leads to plausible threats!
+
 ## Computational Folk Theorem
 
+Given a 2 player, bimatrix game (each player has a separate reward structure), you can build pavlov-like machines for any game. And using Pavlov you can construct subgame perfect nash equilibrium for any game in polynomial time.
 
+- Pavlov if possible
+- If Pavlov is not possible the game is Zero-sum like (solve an LP)
+- At most one player improves
 
 ## Stochastic Games and Multiagent  RL
 
