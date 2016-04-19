@@ -199,6 +199,17 @@ solve the zero sum game in Q values
 
 [s, (a, b), (r_1, r_2), s'] : Q_i(s, (a,b)) <-^{alpha} r_i + \gamma minimax_{a', b'} Q_i(s' (a', b'))
 
+Some nice properties:
+
+- Value iteration works
+- Minimax-Q converges
+- Unique solution to Q*
+- Policies can be computed independently
+- Update efficient
+- Q functions sufficient to specify policy
+
+Adding a second agent doesn't changes things much from MDP although one thing that is unknown is that MDP can be solved in poly time (linear algebra) whereas zero sum stochastic requires value iteration.
+
 ## General Sum Games
 
 
