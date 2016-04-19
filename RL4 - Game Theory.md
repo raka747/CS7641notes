@@ -187,10 +187,17 @@ If T(s, (a, b), s') = T(s, (a, b'), s') for all b' and R_2(s, (a, b)) = 0, and R
 
 If |S| = 1 then it becomes a repeated game.
 
-
 ## Zero-Sum Stochastic Games
 
+Q_i* (S, (a, b)) = R_i(s, (a, b)) + \gamma \sum_s' T(S, (a, b), s') max_{a', b'} Q_i*(s' (a', b'))
 
+what does max mean? Assume joint actions benefit me! (optimistic but delusional)
+
+Q_i* (S, (a, b)) = R_i(s, (a, b)) + \gamma \sum_s' T(S, (a, b), s') minimax_{a', b'} Q_i*(s' (a', b'))
+
+solve the zero sum game in Q values
+
+[s, (a, b), (r_1, r_2), s'] : Q_i(s, (a,b)) <-^{alpha} r_i + \gamma minimax_{a', b'} Q_i(s' (a', b'))
 
 ## General Sum Games
 
