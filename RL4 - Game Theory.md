@@ -231,9 +231,21 @@ Instead of minimax: compute Nash equilibrium
 
 ## Lots of Ideas
 
+Several ideas for addressing this class of games. None of them have emerged as a dominant view, but all cool ideas:
 
+- Repeated stochastic games (folk theorem)
+- Cheaptalk - correlated equilibrium, cheap talk because nothing said is binding but can calculate a correlated equilibrium which is a version of a Nash equilibrium (more efficient to compute, near optimal solutions)
+- Cognitive hierarchy - best responses (assume other player has more limited computation and calculate best response. appears similar to how humans behave)
+- Side payments (coco values)
 
 ## Summary
 
-
-
+- Iterated PD
+- Connect IPD & RL (discount) repeated games
+- We can encourage cooperation and a whole bunch of new Nash Equilibrium appear
+- Folk theorem (threats)
+- Subgame perfection, plausible threats
+- Computation folk theorem
+- Stochastic games, generalize MDPs and repeated games
+- Zero-sum stochastic games. Minimax-Q works
+- General sum games. Nash-Q doesn't, but there is hope
