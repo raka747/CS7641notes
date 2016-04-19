@@ -144,11 +144,31 @@ Given a 2 player, bimatrix game (each player has a separate reward structure), y
 
 ## Stochastic Games and Multiagent  RL
 
+MDP : RL :: Stochastic game : Multiagent RL
 
+Game:
+
+- 3x3 grid
+- Each player can go N, S, E, W, X
+- First to reach goal get $100
+- Both arrive, both win
+- Semi wall (50% go through, above each starting cell)
+
+|    | $                |            | 
+| -- | ---------------- | ---------- |
+|    |                  |            |
+| A  |                  | B          |
+
+Nash? pair of policies such that neither would prefer to switch
+
+They can go both N through the semi-wall and each gets a reward 2/3 of the time.
+
+But this isn't a Nash equlibrium. One of the agents can switch to going to the center and get a reward 100% of the time. This is in Nash!
 
 ## Stochastic Games
 
 
+Described by Shapley. Actually published before Bellman published on MDP.
 
 ## Models & Stochastic Games
 
