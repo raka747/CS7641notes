@@ -102,7 +102,13 @@ Nash Equilibrium!
 
 ## Implausible Threats
 
+A plausible threat is one that is subgame perfect: Always best response independent of history.
 
+TfT vs Grim:
+
+Nash? Yes!
+
+Subgame perfect? Given an alternative history, that isn't necessarily consistent with Grim and TfT, Grim would produce suboptimal results.
 
 ## TfT vs TfT
 
