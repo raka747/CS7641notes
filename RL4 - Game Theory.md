@@ -195,6 +195,8 @@ what does max mean? Assume joint actions benefit me! (optimistic but delusional)
 
 Q_i* (S, (a, b)) = R_i(s, (a, b)) + \gamma \sum_s' T(S, (a, b), s') minimax_{a', b'} Q_i*(s' (a', b'))
 
+minimax_Q is the algorithm to find Q
+
 solve the zero sum game in Q values
 
 [s, (a, b), (r_1, r_2), s'] : Q_i(s, (a,b)) <-^{alpha} r_i + \gamma minimax_{a', b'} Q_i(s' (a', b'))
@@ -212,7 +214,20 @@ Adding a second agent doesn't changes things much from MDP although one thing th
 
 ## General Sum Games
 
+Q_i* (S, (a, b)) = R_i(s, (a, b)) + \gamma \sum_s' T(S, (a, b), s') nash_{a', b'} Q_i*(s' (a', b'))
 
+[s, (a, b), (r_1, r_2), s'] : Q_i(s, (a,b)) <-^{alpha} r_i + \gamma nash_{a', b'} Q_i(s' (a', b'))
+
+Nash-Q algorithm
+
+Instead of minimax: compute Nash equilibrium
+
+- Value iteration works... doesn't work
+- Nash-Q converges... doesn't work
+- No unique solution to Q*
+- Policies can be not be computed independently
+- Update not efficient unless P = PPAD
+- Q functions are not sufficient to specify policy
 
 ## Lots of Ideas
 
