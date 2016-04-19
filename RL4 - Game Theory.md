@@ -126,7 +126,7 @@ Pavlov: Cooperate if agree, defect if disagree.
 
 ## Pavlov vs Pavlov
 
-Pavlov is nash!
+Pavlov is nash! Both start of cooperating and stay cooperating.
 
 ## Pavlov is Subgame Perfect
 
