@@ -130,7 +130,7 @@ Pavlov is nash! Both start of cooperating and stay cooperating.
 
 ## Pavlov is Subgame Perfect
 
-
+You can give it any starting sequence (CC, CD, DC, DD) and it will eventually transition to CC state. This means it's subgame perfect!
 
 ## Computational Folk Theorem
 
