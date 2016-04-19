@@ -94,7 +94,11 @@ Proof: If it strictly dominates the minmax profile, can use it as a threat. Bett
 
 ## Grim Trigger
 
+State of mutual benefit and state of dealing vengeance.
 
+Cooperation keeps you in the state of mutual benefit, but if you cross the line you enter the state of dealing out of vengeance and stay in that state forever.
+
+Nash Equilibrium!
 
 ## Implausible Threats
 
