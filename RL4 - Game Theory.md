@@ -112,11 +112,17 @@ Subgame perfect? Given an alternative history, that isn't necessarily consistent
 
 ## TfT vs TfT
 
+TfT vs TfT is not subgame perfect either. If D/C were initialized into TfT vs TfT then they will proceed to alternate C and D which would cause an average score of -4.5
 
+If D/D was initialized they will have an average score of -6.
+
+The optimal would be to cooperate and average out a reward of -1.
 
 ## Pavlov
 
+TfT: Repeat what opponent did.
 
+Pavlov: Cooperate if agree, defect if disagree.
 
 ## Pavlov vs Pavlov
 
